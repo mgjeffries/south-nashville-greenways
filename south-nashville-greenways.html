@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Nashville Greenways Now</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c28 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(255,255,255,0.05)"/></svg>') no-repeat bottom center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f97316;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+        
+        .cta-button.secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #2d5016;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .problem-section {
+            background: #fef3c7;
+            border-left: 6px solid #f59e0b;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .comparison-item {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-item.bad {
+            border: 3px solid #dc2626;
+        }
+        
+        .comparison-item.good {
+            border: 3px solid #16a34a;
+            background: linear-gradient(to bottom, #f0fdf4 0%, white 100%);
+        }
+        
+        .comparison-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item.bad h3 {
+            color: #dc2626;
+        }
+        
+        .comparison-item.good h3 {
+            color: #16a34a;
+        }
+        
+        .visual-mockup {
+            background: #e5e7eb;
+            border-radius: 15px;
+            padding: 60px 40px;
+            margin: 20px 0;
+            position: relative;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .bad-design {
+            background: linear-gradient(to right, #fee2e2 0%, #fecaca 100%);
+        }
+        
+        .good-design {
+            background: linear-gradient(to right, #d1fae5 0%, #a7f3d0 100%);
+        }
+        
+        .road-visualization {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4a7c28 0%, #2d5016 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2d5016;
+        }
+        
+        .action-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .action-section h2 {
+            color: white;
+        }
+        
+        .action-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .action-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .action-card {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 12px;
+            color: #2d3748;
+        }
+        
+        .action-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .action-number {
+            width: 40px;
+            height: 40px;
+            background: #f97316;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 50px 20px;
+            }
+        }
+        
+        svg text {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>South Nashville Deserves Safe Greenways</h1>
+            <p>Let's build separated walking and biking paths that connect our community—not paint on dangerous highways</p>
+            <div>
+                <a href="#take-action" class="cta-button">Take Action Now</a>
+                <a href="#why" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section problem-section" id="why">
+        <div class="container">
+            <h2>The Problem With Paint</h2>
+            <p class="section-subtitle">North and East Nashville have miles of protected greenways. South Nashville gets bike lanes painted on 4-lane highways.</p>
+            
+            <div class="comparison">
+                <div class="comparison-item bad">
+                    <h3>❌ What We're Getting</h3>
+                    <div class="visual-mockup bad-design">
+                        <svg class="road-visualization" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Highway with painted bike lane -->
+                            <rect x="0" y="60" width="400" height="80" fill="#4a5568"/>
+                            <rect x="0" y="97" width="400" height="6" fill="#fbbf24" stroke-dasharray="10,10"/>
+                            
+                            <!-- Bike lane stripe -->
+                            <rect x="10" y="65" width="50" height="70" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="5,5"/>
+                            
+                            <!-- Cars -->
+                            <rect x="120" y="75" width="60" height="25" fill="#dc2626" rx="3"/>
+                            <rect x="220" y="110" width="60" height="25" fill="#dc2626" rx="3"/>
+                            <rect x="320" y="75" width="60" height="25" fill="#dc2626" rx="3"/>
+                            
+                            <!-- Bike (tiny and vulnerable) -->
+                            <circle cx="35" cy="125" r="8" fill="#000"/>
+                            <circle cx="35" cy="125" r="3" fill="#fff"/>
+                            <rect x="30" y="110" width="3" height="15" fill="#2563eb"/>
+                            
+                            <text x="200" y="30" text-anchor="middle" fill="#dc2626" font-weight="bold">Painted bike lane on 4-lane road</text>
+                            <text x="200" y="180" text-anchor="middle" fill="#7f1d1d" font-size="12">No separation • High speeds • Dangerous</text>
+                        </svg>
+                    </div>
+                    <ul style="text-align: left; margin-top: 20px; line-height: 2;">
+                        <li>Cars traveling 45+ mph inches away</li>
+                        <li>No physical protection</li>
+                        <li>Unsafe for children and families</li>
+                        <li>Discourages active transportation</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-item good">
+                    <h3>✅ What We Need</h3>
+                    <div class="visual-mockup good-design">
+                        <svg class="road-visualization" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Separated greenway -->
+                            <rect x="0" y="80" width="180" height="50" fill="#86efac"/>
+                            <rect x="0" y="85" width="180" height="40" fill="#4ade80"/>
+                            
+                            <!-- Trees/barrier -->
+                            <circle cx="200" cy="60" r="15" fill="#16a34a"/>
+                            <circle cx="200" cy="100" r="15" fill="#16a34a"/>
+                            <circle cx="200" cy="140" r="15" fill="#16a34a"/>
+                            
+                            <!-- Road (separate) -->
+                            <rect x="220" y="80" width="180" height="50" fill="#4a5568"/>
+                            <rect x="220" y="102" width="180" height="6" fill="#fbbf24" stroke-dasharray="10,10"/>
+                            
+                            <!-- Bikes on greenway (safe and happy) -->
+                            <circle cx="50" cy="105" r="8" fill="#000"/>
+                            <circle cx="50" cy="105" r="3" fill="#fff"/>
+                            <circle cx="120" cy="105" r="8" fill="#000"/>
+                            <circle cx="120" cy="105" r="3" fill="#fff"/>
+                            
+                            <!-- Walkers -->
+                            <circle cx="80" cy="100" r="5" fill="#2563eb"/>
+                            <rect x="78" y="105" width="4" height="12" fill="#2563eb"/>
+                            
+                            <text x="200" y="30" text-anchor="middle" fill="#16a34a" font-weight="bold">Protected, separated greenway</text>
+                            <text x="200" y="180" text-anchor="middle" fill="#166534" font-size="12">Safe for all ages • Physically separated • Community asset</text>
+                        </svg>
+                    </div>
+                    <ul style="text-align: left; margin-top: 20px; line-height: 2;">
+                        <li>Physically separated from traffic</li>
+                        <li>Safe for children, seniors, families</li>
+                        <li>Encourages healthy, active lifestyles</li>
+                        <li>Proven to increase property values</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="container">
+            <h2>Why Separated Greenways Matter</h2>
+            <p class="section-subtitle">Real greenways transform communities. Here's why South Nashville needs them.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Safety</h3>
+                    <p>Parents can bike with kids. Seniors can walk without fear. Everyone deserves safe routes to parks, schools, and shops.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💚</div>
+                    <h3>Health & Wellness</h3>
+                    <p>Protected paths encourage walking and biking, reducing obesity, heart disease, and improving mental health.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏘️</div>
+                    <h3>Community Connection</h3>
+                    <p>Greenways become gathering spaces, connecting neighborhoods and fostering a sense of belonging.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌳</div>
+                    <h3>Environmental Benefits</h3>
+                    <p>Fewer car trips mean cleaner air, reduced carbon emissions, and preserved green spaces.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Economic Growth</h3>
+                    <p>Studies show greenways increase nearby property values by 5-10% and attract businesses.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚖️</div>
+                    <h3>Equity & Access</h3>
+                    <p>North Nashville has them. East Nashville has them. It's time for South Nashville to have equal infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section action-section" id="take-action">
+        <div class="container">
+            <h2>Take Action Today</h2>
+            <p class="section-subtitle">The city has plans, but they're moving too slowly. Here's how you can help accelerate real greenway development.</p>
+            
+            <div class="action-cards">
+                <div class="action-card">
+                    <div class="action-number">1</div>
+                    <h3>Sign the Petition</h3>
+                    <p>Add your voice demanding separated greenways for South Nashville. Goal: 5,000 signatures.</p>
+                    <a href="#" class="cta-button" style="margin-top: 15px; padding: 12px 30px; font-size: 1rem;">Sign Now</a>
+                </div>
+                
+                <div class="action-card">
+                    <div class="action-number">2</div>
+                    <h3>Contact Your Council Member</h3>
+                    <p>Let them know this is a priority. We've made it easy with a template message.</p>
+                    <a href="#" class="cta-button" style="margin-top: 15px; padding: 12px 30px; font-size: 1rem;">Send Message</a>
+                </div>
+                
+                <div class="action-card">
+                    <div class="action-number">3</div>
+                    <h3>Attend the Next Meeting</h3>
+                    <p>Metro Planning meets monthly. Show up and make our community heard.</p>
+                    <a href="#" class="cta-button" style="margin-top: 15px; padding: 12px 30px; font-size: 1rem;">Get Details</a>
+                </div>
+                
+                <div class="action-card">
+                    <div class="action-number">4</div>
+                    <h3>Spread the Word</h3>
+                    <p>Share this site with neighbors, friends, and on social media. Build momentum.</p>
+                    <a href="#" class="cta-button" style="margin-top: 15px; padding: 12px 30px; font-size: 1rem;">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>South Nashville Greenways Now</strong></p>
+            <p>A grassroots campaign for safe, separated walking and biking infrastructure</p>
+            <p style="margin-top: 20px; opacity: 0.7;">Contact: info@southnashvillegreenways.org</p>
+        </div>
+    </footer>
+</body>
+</html>
