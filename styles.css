@@ -150,15 +150,16 @@ body {
 }
 
 .visual-mockup {
-    background: #e5e7eb;
     border-radius: 15px;
-    padding: 60px 40px;
     margin: 20px 0;
     position: relative;
-    min-height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+}
+
+.visual-mockup img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
 }
 
 .bad-design {
@@ -169,11 +170,6 @@ body {
     background: linear-gradient(to right, #d1fae5 0%, #a7f3d0 100%);
 }
 
-.road-visualization {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
 
 .benefits-grid {
     display: grid;
@@ -283,7 +279,3 @@ footer {
     }
 }
 
-svg text {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 14px;
-}
