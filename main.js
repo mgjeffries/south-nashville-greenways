@@ -12,7 +12,7 @@ function initShareButton() {
         document.execCommand('copy');
         document.body.removeChild(textarea);
         btn.textContent = 'Copied!';
-        setTimeout(function () { btn.textContent = 'Share'; }, 2000);
+        setTimeout(function () { btn.textContent = 'Copy Link'; }, 2000);
     });
 }
 
