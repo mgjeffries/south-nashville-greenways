@@ -67,28 +67,6 @@ Let's build this together.</p>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const slides = document.querySelectorAll('.carousel-slide');
-            const dots = document.querySelectorAll('.carousel-dot');
-            const prevBtn = document.querySelector('.carousel-btn-prev');
-            const nextBtn = document.querySelector('.carousel-btn-next');
-            let current = 0;
-
-            function goTo(index) {
-                slides[current].classList.remove('active');
-                dots[current].classList.remove('active');
-                current = (index + slides.length) % slides.length;
-                slides[current].classList.add('active');
-                dots[current].classList.add('active');
-            }
-
-            prevBtn.addEventListener('click', function () { goTo(current - 1); });
-            nextBtn.addEventListener('click', function () { goTo(current + 1); });
-            dots.forEach(function (dot, i) {
-                dot.addEventListener('click', function () { goTo(i); });
-            });
-        })();
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
