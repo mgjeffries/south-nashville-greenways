@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - South Nashville Greenways Now</title>
+    <title>About - South Nashville Greenways Now</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,61 +12,49 @@
             <a href="index.html" class="nav-logo">South Nashville Greenways</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="about.html" class="active">About</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="about-hero">
         <div class="hero-content">
-            <h1>About Me</h1>
+            <h1>About</h1>
             <p>Advocate for safer streets and connected communities in South Nashville</p>
         </div>
     </div>
 
     <div class="section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>My Story</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-                <div class="about-image">
-                    <img src="Images/About-me/sunset-bridge.jpg" alt="Sunset view from a bridge">
-                </div>
+            <div class="about-text" style="max-width: 800px; margin: 0 auto 50px;">
+                <h2>My Story</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>
-        </div>
-    </div>
 
-    <div class="section about-section-alt">
-        <div class="container">
-            <div class="about-content reverse">
-                <div class="about-text">
-                    <h2>Why I Care About Greenways</h2>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <img src="Images/About-me/sunset-bridge.jpg" alt="Sunset view from a bridge">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Images/About-me/denver-pedestrian-bridge.JPG" alt="Pedestrian bridge in Denver">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Images/About-me/30a-bike-gib.JPG" alt="Biking on 30A">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Images/About-me/boyscout-patch.png" alt="Boy Scout patch">
+                    </div>
                 </div>
-                <div class="about-image">
-                    <img src="Images/About-me/denver-pedestrian-bridge.JPG" alt="Pedestrian bridge in Denver">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">&#10094;</button>
+                <button class="carousel-btn carousel-btn-next" aria-label="Next slide">&#10095;</button>
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" aria-label="Go to slide 4"></button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section about-section-alt">
-        <div class="container">
-            <h2 style="text-align: center; color: #2d5016; margin-bottom: 40px;">More Adventures</h2>
-            <div class="about-gallery">
-                <div class="gallery-item">
-                    <img src="Images/About-me/30a-bike-gib.JPG" alt="Biking on 30A">
-                </div>
-                <div class="gallery-item">
-                    <img src="Images/About-me/boyscout-patch.png" alt="Boy Scout patch">
-                </div>
-            </div>
-            <div class="about-text" style="max-width: 800px; margin: 40px auto 0;">
-                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
             </div>
         </div>
     </div>
@@ -77,5 +65,29 @@
             <p>A grassroots campaign for safe, separated walking and biking infrastructure</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.carousel-btn-prev');
+            const nextBtn = document.querySelector('.carousel-btn-next');
+            let current = 0;
+
+            function goTo(index) {
+                slides[current].classList.remove('active');
+                dots[current].classList.remove('active');
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dots[current].classList.add('active');
+            }
+
+            prevBtn.addEventListener('click', function () { goTo(current - 1); });
+            nextBtn.addEventListener('click', function () { goTo(current + 1); });
+            dots.forEach(function (dot, i) {
+                dot.addEventListener('click', function () { goTo(i); });
+            });
+        })();
+    </script>
 </body>
 </html>
