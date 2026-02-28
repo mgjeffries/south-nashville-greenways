@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "blog-post": {
+      "source": "langchain-ai/deepagents",
+      "sourceType": "github",
+      "computedHash": "1c28fc52836ddfd902348d9ea8e196d3d7a43c06c47c926256d48408936c7092"
+    }
+  }
+}
