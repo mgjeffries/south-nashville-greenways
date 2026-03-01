@@ -17,7 +17,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'antioch-pike',
-    title: 'Antioch Pike Gets a Colorful New Path',
+    title: 'Antioch Pike Has a Colorful New Bikeway',
     author: 'Gib Jeffries',
     date: 'February 28, 2026',
     imageSrc: '/images/blog/2026-02-22-antioch-pike.jpg',

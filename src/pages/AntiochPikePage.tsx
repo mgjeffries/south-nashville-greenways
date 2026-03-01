@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Lightbox from '../components/Lightbox.tsx'
 import MapOverlay from '../components/MapOverlay.tsx'
 import { blogPosts } from '../data/blogPosts.ts'
@@ -13,6 +14,14 @@ export default function AntiochPikePage() {
           <p className="post-byline">By {post.author} · <time>{post.date}</time></p>
         </div>
       </div>
+
+      <nav className="breadcrumbs">
+        <div className="container">
+          <Link to="/projects">Projects</Link>
+          <span className="breadcrumb-separator">/</span>
+          <span>{post.title}</span>
+        </div>
+      </nav>
 
       <div className="section">
         <div className="container post-detail">
