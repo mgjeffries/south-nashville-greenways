@@ -17,7 +17,7 @@ export default function HomePage() {
             <ComparisonCard
               variant="bad"
               title="What We Have"
-              imageSrc="/images/painted-bike-lanes-v3.png"
+              imageSrc="/images/paint-bike-lanes.png"
               imageAlt="Painted bike lane with no physical separation from traffic"
               items={[
                 'Cars traveling 30+ mph inches away',
@@ -29,7 +29,7 @@ export default function HomePage() {
             <ComparisonCard
               variant="good"
               title="What We Need"
-              imageSrc="/images/protected-bike-lanes-v3.png"
+              imageSrc="/images/protected-bike-lanes.png"
               imageAlt="Bike/pedestrian lane separated from traffic by grass and trees"
               items={[
                 'Physically separated from traffic',

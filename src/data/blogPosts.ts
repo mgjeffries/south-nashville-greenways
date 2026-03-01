@@ -1,48 +1,163 @@
+export interface BlogPostLink {
+  label: string;
+  url: string;
+}
+
+export interface BlogPostImage {
+  src: string;
+  alt: string;
+}
+
+export type BlogPostContent =
+  | string
+  | { type: "callout"; text: string }
+  | { type: "image"; imageIndex: number; caption?: string };
+
 export interface BlogPost {
-  slug: string
-  title: string
-  excerpt: string
-  date: string
-  readTime: string
-  category: string
-  categoryColor: string
-  heroGradient: string
-  featured?: boolean
+  slug: string;
+  title: string;
+  author: string;
+  date: string;
+  images: BlogPostImage[];
+  heroCaption?: string;
+  summary: string;
+  content: BlogPostContent[];
+  links?: BlogPostLink[];
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'antioch-pike-safety-crisis',
-    title: '116 Lives Lost: The Hidden Crisis on Nashville\u2019s Most Dangerous Roads',
+    slug: "east-thompson",
+    title: "NDOT Plans to Add Bikeways to East Thompson",
+    author: "gib-jeffries",
+    date: "March 1, 2026",
+    images: [
+      {
+        src: "/images/blog/2026-03-01-east-thompson-design-concept.png",
+        alt: "Design concept for East Thompson Lane bikeways",
+      },
+      {
+        src: "/images/blog/2026-03-01-east-thompson-intersection.png",
+        alt: "Map showing traffic accidents at the Thompson and East Thompson intersection",
+      },
+    ],
+    heroCaption: "NDOT design concept for East Thompson Lane",
+    summary:
+      "NDOT is making plans to enhance safety and mobility on East Thompson Lane. The design concept features a bike lane and sidewalks, but key questions remain about protective barriers and the dangerous Thompson intersection.",
+    content: [
+      "When you think of greenways in South Nashville, East Thompson Lane is probably one of the last roads you think of. It's wiiiiiiiiiiiiiiiiide! There are many places without bike lanes or sidewalks, and it intersects with two similar roads. It feels dangerous, and the data from NDOT's vision zero program show that it has been the site of many crashes, some of them fatal.",
+      "But all of that may be about to change. NDOT is making plans to enhance safety and mobility on this road. The October 2024 design concept features a bike lane, and sidewalks in some locations.",
+      "I was able to participate in the April 2024 community ride, without any of the proposed enhancements, and the temporary road demonstration in June of 2025 where NDOT set out traffic cones to represent the design concept. It was much more pleasant to ride on as a cyclist with the traffic cones reserving space for me on the road.",
+      "I do have some open questions about the design concept:",
+      {
+        type: "callout",
+        text: 'Will there be protective barriers such as concrete curbs to protect pedestrians from cars? The design concept says "Where feasible, consider depaving the buffer area to potentially include landscaping, concrete curb, etc." To me, that will make a difference between whether this installation feels safe to use.',
+      },
+      {
+        type: "image",
+        imageIndex: 1,
+        caption:
+          "Traffic accident data at the Thompson and East Thompson intersection. Source: Nashville Open Data",
+      },
+      {
+        type: "callout",
+        text: 'The intersection of Thompson and East Thompson is labeled "Intersection Design By Others" in this concept. The data shows that this intersection is a hotspot of crashes, some of them fatal. My challenge to the community is to not let this intersection stay unfinished.',
+      },
+    ],
+    links: [
+      {
+        label: "NDOT's Project Site",
+        url: "https://www.nashville.gov/departments/transportation/projects/complete-streets/east-thompson-lane-multimodal-project",
+      },
+      {
+        label: "Traffic Accidents Data (Nashville Open Data)",
+        url: "https://datanashvillegov-nashville.hub.arcgis.com/datasets/Nashville::traffic-accidents/explore?location=36.109528%2C-86.727783%2C18&style=Number_of_Fatalities",
+      },
+    ],
+  },
+  {
+    slug: "antioch-pike",
+    title: "Antioch Pike has a Colorful New Bikeway",
+    author: "gib-jeffries",
+    date: "February 28, 2026",
+    images: [
+      {
+        src: "/images/blog/2026-02-22-antioch-pike.jpg",
+        alt: "A vibrant painted mural path along Antioch Pike featuring colorful floral designs",
+      },
+      {
+        src: "/images/blog/2026-02-28-antioch-pike-project-extents.png",
+        alt: "Map showing the Antioch Pike project extents",
+      },
+    ],
+    heroCaption: "Painted mural bikeway along Antioch Pike",
+    summary:
+      "A new painted path along Antioch Pike is bringing color and life to the neighborhood. Head out and experience the beautiful mural artwork while enjoying a walk or ride through South Nashville.",
+    content: [
+      "If you haven't already taken a stroll or bike ride down Antioch Pike I highly recommend it! The new murals are fun to see, and the new bike lanes have transformed the road. The installation show was built by NDOT as a temporary Tactical Urbanism project, and they are currently making plans for a permanent installation. Try it out so you can give your feedback to NDOT, and take part in making South Nashville a great place to walk and bike!",
+      { type: "image", imageIndex: 1, caption: "Map of current bikeway" },
+    ],
+    links: [
+      {
+        label: "NDOT's Project Site",
+        url: "https://www.nashville.gov/departments/transportation/projects/complete-streets/east-thompson-lane-multimodal-project",
+      },
+      {
+        label: "Civic Design Center: Transforming Antioch Pike",
+        url: "https://www.civicdesigncenter.org/all-projects-blog/transforming-antioch-pike-a-collaborative-vision-for-a-healthier-safer-corridor",
+      },
+    ],
+  },
+];
+export interface BlogPostDupe {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  category: string;
+  categoryColor: string;
+  heroGradient: string;
+  featured?: boolean;
+}
+
+export const blogPostsDupe: BlogPostDupe[] = [
+  {
+    slug: "antioch-pike-safety-crisis",
+    title:
+      "116 Lives Lost: The Hidden Crisis on Nashville\u2019s Most Dangerous Roads",
     excerpt:
-      'Nashville lost 116 people to traffic violence in 2024\u2014two lives every single week. The data reveals a pattern that demands action, and Antioch Pike sits at the center of it.',
-    date: 'February 15, 2025',
-    readTime: '8 min read',
-    category: 'INVESTIGATION',
-    categoryColor: '#991b1b',
-    heroGradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+      "Nashville lost 116 people to traffic violence in 2024\u2014two lives every single week. The data reveals a pattern that demands action, and Antioch Pike sits at the center of it.",
+    date: "February 15, 2025",
+    readTime: "8 min read",
+    category: "INVESTIGATION",
+    categoryColor: "#991b1b",
+    heroGradient:
+      "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
     featured: true,
   },
   {
-    slug: 'open-streets-antioch-pike',
-    title: 'The Day a Thousand Neighbors Took Back Their Street',
+    slug: "open-streets-antioch-pike",
+    title: "The Day a Thousand Neighbors Took Back Their Street",
     excerpt:
-      'On a warm November afternoon, Antioch Pike fell silent\u2014no speeding cars, no close calls. Instead: Mariachi music, children on bicycles, and a neighborhood reimagining what their street could be.',
-    date: 'January 28, 2025',
-    readTime: '6 min read',
-    category: 'COMMUNITY',
-    categoryColor: '#2d5016',
-    heroGradient: 'linear-gradient(135deg, #2d5016 0%, #4a7c28 50%, #6b9b37 100%)',
+      "On a warm November afternoon, Antioch Pike fell silent\u2014no speeding cars, no close calls. Instead: Mariachi music, children on bicycles, and a neighborhood reimagining what their street could be.",
+    date: "January 28, 2025",
+    readTime: "6 min read",
+    category: "COMMUNITY",
+    categoryColor: "#2d5016",
+    heroGradient:
+      "linear-gradient(135deg, #2d5016 0%, #4a7c28 50%, #6b9b37 100%)",
   },
   {
-    slug: 'antioch-pike-boulevard-vision',
-    title: 'From Dangerous Pike to Welcoming Boulevard',
+    slug: "antioch-pike-boulevard-vision",
+    title: "From Dangerous Pike to Welcoming Boulevard",
     excerpt:
-      'A community-designed vision is transforming one of South Nashville\u2019s most dangerous corridors into a tree-lined boulevard with protected bike lanes and safe crossings for all.',
-    date: 'January 10, 2025',
-    readTime: '7 min read',
-    category: 'VISION',
-    categoryColor: '#7c3aed',
-    heroGradient: 'linear-gradient(135deg, #1e3a5f 0%, #2d6a4f 50%, #40916c 100%)',
+      "A community-designed vision is transforming one of South Nashville\u2019s most dangerous corridors into a tree-lined boulevard with protected bike lanes and safe crossings for all.",
+    date: "January 10, 2025",
+    readTime: "7 min read",
+    category: "VISION",
+    categoryColor: "#7c3aed",
+    heroGradient:
+      "linear-gradient(135deg, #1e3a5f 0%, #2d6a4f 50%, #40916c 100%)",
   },
-]
+];
