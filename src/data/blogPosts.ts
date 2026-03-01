@@ -8,7 +8,10 @@ export interface BlogPostImage {
   alt: string
 }
 
-export type BlogPostContent = string | { type: 'callout'; text: string }
+export type BlogPostContent =
+  | string
+  | { type: 'callout'; text: string }
+  | { type: 'image'; imageIndex: number; caption?: string }
 
 export interface BlogPost {
   slug: string
@@ -16,6 +19,7 @@ export interface BlogPost {
   author: string
   date: string
   images: BlogPostImage[]
+  heroCaption?: string
   summary: string
   content: BlogPostContent[]
   links?: BlogPostLink[]
@@ -37,6 +41,7 @@ export const blogPosts: BlogPost[] = [
         alt: 'Map showing traffic accidents at the Thompson and East Thompson intersection',
       },
     ],
+    heroCaption: 'NDOT design concept for East Thompson Lane',
     summary:
       'NDOT is making plans to enhance safety and mobility on East Thompson Lane. The design concept features a bike lane and sidewalks, but key questions remain about protective barriers and the dangerous Thompson intersection.',
     content: [
@@ -45,6 +50,7 @@ export const blogPosts: BlogPost[] = [
       'I was able to participate in the April 2024 community ride, without any of the proposed enhancements, and the temporary road demonstration in June of 2025 where NDOT set out traffic cones to represent the design concept. It was much more pleasant to ride on as a cyclist with the traffic cones reserving space for me on the road.',
       'I do have some open questions about the design concept:',
       { type: 'callout', text: 'Will there be protective barriers such as concrete curbs to protect pedestrians from cars? The design concept says "Where feasible, consider depaving the buffer area to potentially include landscaping, concrete curb, etc." To me, that will make a difference between whether this installation feels safe to use.' },
+      { type: 'image', imageIndex: 1, caption: 'Traffic accident data at the Thompson and East Thompson intersection. Source: Nashville Open Data' },
       { type: 'callout', text: 'The intersection of Thompson and East Thompson is labeled "Intersection Design By Others" in this concept. The data shows that this intersection is a hotspot of crashes, some of them fatal. My challenge to the community is to not let this intersection stay unfinished.' },
     ],
     links: [
@@ -73,10 +79,12 @@ export const blogPosts: BlogPost[] = [
         alt: 'Map showing the Antioch Pike project extents',
       },
     ],
+    heroCaption: 'Painted mural bikeway along Antioch Pike',
     summary:
       'A new painted path along Antioch Pike is bringing color and life to the neighborhood. Head out and experience the beautiful mural artwork while enjoying a walk or ride through South Nashville.',
     content: [
-      'If you haven’t already taken a stroll or bike ride down Antioch Pike I highly recommend it! The new murals are fun to see, and the new bike lanes have transformed the road. The installation show was built by NDOT as a temporary Tactical Urbanism project, and they are currently making plans for a permanent installation. Try it out so you can give your feedback to NDOT, and take part in making South Nashville a great place to walk and bike!',
+      'If you haven\'t already taken a stroll or bike ride down Antioch Pike I highly recommend it! The new murals are fun to see, and the new bike lanes have transformed the road. The installation show was built by NDOT as a temporary Tactical Urbanism project, and they are currently making plans for a permanent installation. Try it out so you can give your feedback to NDOT, and take part in making South Nashville a great place to walk and bike!',
+      { type: 'image', imageIndex: 1, caption: 'Map of current bikeway' },
     ],
     links: [
       {
