@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop.tsx'
 import HomePage from './pages/HomePage.tsx'
 import AboutPage from './pages/AboutPage.tsx'
 import ProjectsPage from './pages/ProjectsPage.tsx'
+import AntiochPikePage from './pages/AntiochPikePage.tsx'
 import { usePageTracking } from './hooks/usePageTracking.ts'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects/antioch-pike" element={<AntiochPikePage />} />
       </Routes>
       <Footer />
     </>

@@ -353,6 +353,12 @@ footer {
     transition: transform 0.3s;
 }
 
+.blog-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .blog-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
