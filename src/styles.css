@@ -560,3 +560,31 @@ footer {
     }
 }
 
+/* Map Overlay */
+.map-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.map-overlay-background {
+    width: 100%;
+    display: block;
+}
+
+.map-overlay-foreground {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+}
+
+.map-overlay-foreground-top {
+    top: 10%;
+}
+
+.map-overlay-foreground-bottom {
+    bottom: 10%;
+}
+
