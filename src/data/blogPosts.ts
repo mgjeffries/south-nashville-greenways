@@ -6,6 +6,7 @@ export interface BlogPostLink {
 export interface BlogPost {
   slug: string
   title: string
+  author: string
   date: string
   imageSrc: string
   imageAlt: string
@@ -17,7 +18,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'antioch-pike',
     title: 'Antioch Pike Gets a Colorful New Path',
-    date: 'February 22, 2026',
+    author: 'Gib Jeffries',
+    date: 'February 28, 2026',
     imageSrc: '/images/blog/2026-02-22-antioch-pike.jpg',
     imageAlt:
       'A vibrant painted mural path along Antioch Pike featuring colorful floral designs',

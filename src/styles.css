@@ -567,6 +567,12 @@ footer {
 }
 
 /* Post Detail */
+.post-byline {
+    opacity: 0.9;
+    font-size: 1.05rem;
+    margin-top: 8px;
+}
+
 .post-detail {
     max-width: 760px;
 }

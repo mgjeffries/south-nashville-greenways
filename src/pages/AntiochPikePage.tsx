@@ -10,7 +10,7 @@ export default function AntiochPikePage() {
       <div className="about-hero">
         <div className="container">
           <h1>{post.title}</h1>
-          <time>{post.date}</time>
+          <p className="post-byline">By {post.author} · <time>{post.date}</time></p>
         </div>
       </div>
 
