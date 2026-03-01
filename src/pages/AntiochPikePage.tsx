@@ -16,7 +16,7 @@ export default function AntiochPikePage() {
 
       <nav className="breadcrumbs">
         <div className="container">
-          <Link to="/projects">Projects</Link>
+          <Link to="/blog">Blog</Link>
           <span className="breadcrumb-separator">/</span>
           <span>{post.title}</span>
         </div>

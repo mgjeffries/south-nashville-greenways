@@ -1,12 +1,12 @@
 import BlogCard from '../components/BlogCard.tsx'
 import { blogPosts } from '../data/blogPosts.ts'
 
-export default function ProjectsPage() {
+export default function BlogPage() {
   return (
     <>
       <div className="about-hero">
         <div className="container">
-          <h1>Current Projects</h1>
+          <h1>Blog</h1>
           <p>See what's happening in South Nashville and get involved.</p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import type { BlogPost } from '../data/blogPosts'
 
 export default function BlogCard({ slug, title, date, imageSrc, imageAlt, summary }: BlogPost) {
   return (
-    <Link to={`/projects/${slug}`} className="blog-card-link">
+    <Link to={`/blog/${slug}`} className="blog-card-link">
       <article className="blog-card">
         <div className="blog-card-image">
           <img src={imageSrc} alt={imageAlt} />
