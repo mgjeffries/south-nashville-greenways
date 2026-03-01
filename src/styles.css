@@ -566,6 +566,58 @@ footer {
     }
 }
 
+/* Post Detail */
+.post-detail {
+    max-width: 760px;
+}
+
+.post-hero-image {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.post-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Lightbox */
+.lightbox-trigger {
+    cursor: zoom-in;
+}
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+    padding: 40px;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.learn-more {
+    margin-top: 48px;
+}
+
+.learn-more h2 {
+    font-size: 1.6rem;
+    color: #2d5016;
+    margin-bottom: 16px;
+}
+
 /* Map Overlay */
 .map-overlay {
     position: relative;
