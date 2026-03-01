@@ -7,6 +7,7 @@ export default function Nav() {
         <NavLink to="/" className="nav-logo">South Nashville Greenways</NavLink>
         <ul className="nav-links">
           <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/projects">Projects</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
         </ul>
       </div>

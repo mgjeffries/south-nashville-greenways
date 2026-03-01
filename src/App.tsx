@@ -4,6 +4,7 @@ import Footer from './components/Footer.tsx'
 import ScrollToTop from './components/ScrollToTop.tsx'
 import HomePage from './pages/HomePage.tsx'
 import AboutPage from './pages/AboutPage.tsx'
+import ProjectsPage from './pages/ProjectsPage.tsx'
 import { usePageTracking } from './hooks/usePageTracking.ts'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
       <Footer />
     </>
