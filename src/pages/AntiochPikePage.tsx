@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Lightbox from '../components/Lightbox.tsx'
-import MapOverlay from '../components/MapOverlay.tsx'
 import { blogPosts } from '../data/blogPosts.ts'
 
 const post = blogPosts.find((p) => p.slug === 'antioch-pike')!
@@ -35,18 +34,19 @@ export default function AntiochPikePage() {
 
           <p className="post-body">{post.summary}</p>
 
-          <Lightbox
-            src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
-            alt="Zoomed-in map showing the Antioch Pike project extents"
-          >
-            <MapOverlay
-              backgroundSrc="/images/blog/2026-02-28-south-nashville-large.png"
-              backgroundAlt="Map of south Nashville showing the project area in regional context"
-              foregroundSrc="/images/blog/2026-02-28-antioch-pike-project-extents.png"
-              foregroundAlt="Zoomed-in map showing the Antioch Pike project extents"
-              foregroundPosition="top"
-            />
-          </Lightbox>
+          <figure className="post-figure">
+            <Lightbox
+              src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
+              alt="Zoomed-in map showing the Antioch Pike project extents"
+            >
+              <img
+                className="post-hero-image"
+                src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
+                alt="Zoomed-in map showing the Antioch Pike project extents"
+              />
+            </Lightbox>
+            <figcaption>Map of current bikeway</figcaption>
+          </figure>
 
           {post.links && post.links.length > 0 && (
             <section className="learn-more">
