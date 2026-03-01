@@ -616,7 +616,8 @@ footer {
     text-align: center;
     color: #64748b;
     font-size: 0.9rem;
-    margin-top: 8px;
+    margin-top: 4px;
+    margin-bottom: 24px;
 }
 
 .lightbox-caption {

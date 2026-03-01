@@ -24,7 +24,7 @@ export default function AntiochPikePage() {
 
       <div className="section">
         <div className="container post-detail">
-          <Lightbox src={post.images[0].src} alt={post.images[0].alt}>
+          <Lightbox src={post.images[0].src} alt={post.images[0].alt} caption="Painted mural bikeway along Antioch Pike">
             <img
               className="post-hero-image"
               src={post.images[0].src}
