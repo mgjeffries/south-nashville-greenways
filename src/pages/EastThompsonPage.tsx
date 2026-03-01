@@ -24,7 +24,7 @@ export default function EastThompsonPage() {
 
       <div className="section">
         <div className="container post-detail">
-          <Lightbox src={post.images[0].src} alt={post.images[0].alt}>
+          <Lightbox src={post.images[0].src} alt={post.images[0].alt} caption="NDOT design concept for East Thompson Lane">
             <img
               className="post-hero-image"
               src={post.images[0].src}
@@ -39,7 +39,7 @@ export default function EastThompsonPage() {
           <Lightbox
             src={post.images[1].src}
             alt={post.images[1].alt}
-            caption="Traffic accident data at the Thompson and East Thompson intersection"
+            caption="Traffic accident data at the Thompson and East Thompson intersection. Source: Nashville Open Data"
           >
             <img
               className="post-hero-image"
