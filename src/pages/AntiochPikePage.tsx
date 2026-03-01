@@ -34,19 +34,17 @@ export default function AntiochPikePage() {
 
           <p className="post-body">{post.summary}</p>
 
-          <figure className="post-figure">
-            <Lightbox
+          <Lightbox
+            src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
+            alt="Zoomed-in map showing the Antioch Pike project extents"
+            caption="Map of current bikeway"
+          >
+            <img
+              className="post-hero-image"
               src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
               alt="Zoomed-in map showing the Antioch Pike project extents"
-            >
-              <img
-                className="post-hero-image"
-                src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
-                alt="Zoomed-in map showing the Antioch Pike project extents"
-              />
-            </Lightbox>
-            <figcaption>Map of current bikeway</figcaption>
-          </figure>
+            />
+          </Lightbox>
 
           {post.links && post.links.length > 0 && (
             <section className="learn-more">

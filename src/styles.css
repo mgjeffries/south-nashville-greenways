@@ -603,11 +603,22 @@ footer {
     max-width: 860px;
 }
 
-.post-figure figcaption {
+.lightbox-figure {
+    margin: 0;
+}
+
+.lightbox-figure figcaption {
     text-align: center;
     color: #64748b;
     font-size: 0.9rem;
     margin-top: 8px;
+}
+
+.lightbox-caption {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin-top: 12px;
 }
 
 .post-hero-image {
