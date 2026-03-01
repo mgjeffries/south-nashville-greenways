@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'antioch-pike',
-    title: 'Antioch Pike Has a Colorful New Bikeway',
+    title: 'Antioch Pike has a Colorful New Bikeway',
     author: 'gib-jeffries',
     date: 'February 28, 2026',
     images: [
