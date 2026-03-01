@@ -388,6 +388,30 @@ footer {
     line-height: 1.6;
 }
 
+.blog-card-links {
+    list-style: none;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.blog-card-links a {
+    display: inline-block;
+    color: white;
+    background: #2d5016;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.blog-card-links a:hover {
+    background: #f97316;
+}
+
 /* About Page */
 .about-hero {
     background: linear-gradient(135deg, #2d5016 0%, #4a7c28 100%);
