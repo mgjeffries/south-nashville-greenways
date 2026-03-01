@@ -32,7 +32,10 @@ export default function AntiochPikePage() {
             />
           </Lightbox>
 
-          <p className="post-body">{post.summary}</p>
+
+          {post.content.map((paragraph, i) => (
+            <p key={i} className="post-body">{paragraph}</p>
+          ))}
 
           <Lightbox
             src="/images/blog/2026-02-28-antioch-pike-project-extents.png"
