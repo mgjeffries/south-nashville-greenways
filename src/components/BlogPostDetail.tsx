@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import Lightbox from './Lightbox.tsx'
+import AuthorBio from './AuthorBio.tsx'
 import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
+import { authors } from '../data/authors.ts'
 
 function renderContent(item: BlogPostContent, i: number, images: { src: string; alt: string }[]) {
   if (typeof item === 'string') {
@@ -25,7 +27,7 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
       <div className="about-hero">
         <div className="container">
           <h1>{post.title}</h1>
-          <p className="post-byline">By {post.author} · <time>{post.date}</time></p>
+          <p className="post-byline">By {authors[post.author].name} · <time>{post.date}</time></p>
         </div>
       </div>
 
@@ -63,6 +65,8 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
               </ul>
             </section>
           )}
+
+          <AuthorBio author={authors[post.author]} />
         </div>
       </div>
     </>

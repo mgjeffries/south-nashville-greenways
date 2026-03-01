@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'east-thompson',
     title: 'NDOT Plans to Add Bikeways to East Thompson',
-    author: 'Gib Jeffries',
+    author: 'gib-jeffries',
     date: 'March 1, 2026',
     images: [
       {
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'antioch-pike',
     title: 'Antioch Pike Has a Colorful New Bikeway',
-    author: 'Gib Jeffries',
+    author: 'gib-jeffries',
     date: 'February 28, 2026',
     images: [
       {
