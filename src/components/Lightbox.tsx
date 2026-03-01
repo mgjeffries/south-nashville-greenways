@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 
 interface LightboxProps {
   children: ReactNode
@@ -10,6 +10,15 @@ interface LightboxProps {
 export default function Lightbox({ children, src, alt, caption }: LightboxProps) {
   const [open, setOpen] = useState(false)
 
+  useEffect(() => {
+    if (!open) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open])
+
   return (
     <>
       <figure className="lightbox-figure" onClick={() => setOpen(true)}>
@@ -20,7 +29,7 @@ export default function Lightbox({ children, src, alt, caption }: LightboxProps)
       </figure>
       {open && (
         <div className="lightbox-overlay" onClick={() => setOpen(false)}>
-          <figure className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+          <figure className="lightbox-content" onClick={() => setOpen(false)}>
             <img src={src} alt={alt} className="lightbox-image" />
             {caption && <figcaption className="lightbox-caption">{caption}</figcaption>}
           </figure>
