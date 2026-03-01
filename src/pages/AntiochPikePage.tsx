@@ -24,11 +24,11 @@ export default function AntiochPikePage() {
 
       <div className="section">
         <div className="container post-detail">
-          <Lightbox src={post.imageSrc} alt={post.imageAlt}>
+          <Lightbox src={post.images[0].src} alt={post.images[0].alt}>
             <img
               className="post-hero-image"
-              src={post.imageSrc}
-              alt={post.imageAlt}
+              src={post.images[0].src}
+              alt={post.images[0].alt}
             />
           </Lightbox>
 

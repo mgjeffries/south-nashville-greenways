@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import type { BlogPost } from '../data/blogPosts'
 
-export default function BlogCard({ slug, title, date, imageSrc, imageAlt, summary }: BlogPost) {
+export default function BlogCard({ slug, title, date, images, summary }: BlogPost) {
   return (
     <Link to={`/blog/${slug}`} className="blog-card-link">
       <article className="blog-card">
         <div className="blog-card-image">
-          <img src={imageSrc} alt={imageAlt} />
+          {images.map((image) => (
+            <img key={image.src} src={image.src} alt={image.alt} />
+          ))}
         </div>
         <div className="blog-card-content">
           <time className="blog-card-date">{date}</time>

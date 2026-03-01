@@ -3,13 +3,17 @@ export interface BlogPostLink {
   url: string
 }
 
+export interface BlogPostImage {
+  src: string
+  alt: string
+}
+
 export interface BlogPost {
   slug: string
   title: string
   author: string
   date: string
-  imageSrc: string
-  imageAlt: string
+  images: BlogPostImage[]
   summary: string
   content: string[]
   links?: BlogPostLink[]
@@ -21,9 +25,16 @@ export const blogPosts: BlogPost[] = [
     title: 'Antioch Pike Has a Colorful New Bikeway',
     author: 'Gib Jeffries',
     date: 'February 28, 2026',
-    imageSrc: '/images/blog/2026-02-22-antioch-pike.jpg',
-    imageAlt:
-      'A vibrant painted mural path along Antioch Pike featuring colorful floral designs',
+    images: [
+      {
+        src: '/images/blog/2026-02-22-antioch-pike.jpg',
+        alt: 'A vibrant painted mural path along Antioch Pike featuring colorful floral designs',
+      },
+      {
+        src: '/images/blog/2026-02-28-antioch-pike-project-extents.png',
+        alt: 'Map showing the Antioch Pike project extents',
+      },
+    ],
     summary:
       'A new painted path along Antioch Pike is bringing color and life to the neighborhood. Head out and experience the beautiful mural artwork while enjoying a walk or ride through South Nashville.',
     content: [
