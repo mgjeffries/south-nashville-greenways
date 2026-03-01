@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
 import Lightbox from '../components/Lightbox.tsx'
-import { blogPosts } from '../data/blogPosts.ts'
+import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
 
 const post = blogPosts.find((p) => p.slug === 'antioch-pike')!
+
+function renderContent(item: BlogPostContent, i: number) {
+  if (typeof item === 'string') {
+    return <p key={i} className="post-body">{item}</p>
+  }
+  return <blockquote key={i} className="post-callout">{item.text}</blockquote>
+}
 
 export default function AntiochPikePage() {
   return (
@@ -34,7 +41,7 @@ export default function AntiochPikePage() {
 
 
           {post.content.map((paragraph, i) => (
-            <p key={i} className="post-body">{paragraph}</p>
+            renderContent(paragraph, i)
           ))}
 
           <Lightbox

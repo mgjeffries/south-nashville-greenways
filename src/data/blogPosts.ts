@@ -8,6 +8,8 @@ export interface BlogPostImage {
   alt: string
 }
 
+export type BlogPostContent = string | { type: 'callout'; text: string }
+
 export interface BlogPost {
   slug: string
   title: string
@@ -15,7 +17,7 @@ export interface BlogPost {
   date: string
   images: BlogPostImage[]
   summary: string
-  content: string[]
+  content: BlogPostContent[]
   links?: BlogPostLink[]
 }
 
@@ -42,8 +44,8 @@ export const blogPosts: BlogPost[] = [
       'But all of that may be about to change. NDOT is making plans to enhance safety and mobility on this road. The October 2024 design concept features a bike lane, and sidewalks in some locations.',
       'I was able to participate in the April 2024 community ride, without any of the proposed enhancements, and the temporary road demonstration in June of 2025 where NDOT set out traffic cones to represent the design concept. It was much more pleasant to ride on as a cyclist with the traffic cones reserving space for me on the road.',
       'I do have some open questions about the design concept:',
-      'Will there be protective barriers such as concrete curbs to protect pedestrians from cars? The design concept says "Where feasible, consider depaving the buffer area to potentially include landscaping, concrete curb, etc." To me, that will make a difference between whether this installation feels safe to use.',
-      'The intersection of Thompson and East Thompson is labeled "Intersection Design By Others" in this concept. The data shows that this intersection is a hotspot of crashes, some of them fatal. My challenge to the community is to not let this intersection stay unfinished.',
+      { type: 'callout', text: 'Will there be protective barriers such as concrete curbs to protect pedestrians from cars? The design concept says "Where feasible, consider depaving the buffer area to potentially include landscaping, concrete curb, etc." To me, that will make a difference between whether this installation feels safe to use.' },
+      { type: 'callout', text: 'The intersection of Thompson and East Thompson is labeled "Intersection Design By Others" in this concept. The data shows that this intersection is a hotspot of crashes, some of them fatal. My challenge to the community is to not let this intersection stay unfinished.' },
     ],
     links: [
       {

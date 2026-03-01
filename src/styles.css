@@ -641,6 +641,16 @@ footer {
     margin-bottom: 40px;
 }
 
+.post-callout {
+    background: #fff8e1;
+    border-left: 4px solid #f57c00;
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
 /* Lightbox */
 .lightbox-trigger {
     cursor: zoom-in;

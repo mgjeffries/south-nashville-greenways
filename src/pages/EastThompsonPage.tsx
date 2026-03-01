@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
 import Lightbox from '../components/Lightbox.tsx'
-import { blogPosts } from '../data/blogPosts.ts'
+import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
 
 const post = blogPosts.find((p) => p.slug === 'east-thompson')!
+
+function renderContent(item: BlogPostContent, i: number) {
+  if (typeof item === 'string') {
+    return <p key={i} className="post-body">{item}</p>
+  }
+  return <blockquote key={i} className="post-callout">{item.text}</blockquote>
+}
 
 export default function EastThompsonPage() {
   return (
@@ -33,7 +40,7 @@ export default function EastThompsonPage() {
           </Lightbox>
 
           {post.content.slice(0, 5).map((paragraph, i) => (
-            <p key={i} className="post-body">{paragraph}</p>
+            renderContent(paragraph, i)
           ))}
 
           <Lightbox
@@ -49,7 +56,7 @@ export default function EastThompsonPage() {
           </Lightbox>
 
           {post.content.slice(5).map((paragraph, i) => (
-            <p key={i} className="post-body">{paragraph}</p>
+            renderContent(paragraph, i)
           ))}
 
           {post.links && post.links.length > 0 && (
