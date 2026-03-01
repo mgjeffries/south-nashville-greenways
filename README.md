@@ -17,6 +17,16 @@ npm run dev
 npm run build
 ```
 
+## Images
+
+This project uses [Git LFS](https://git-lfs.com/) to store image files. Install Git LFS before cloning:
+
+```bash
+git lfs install
+```
+
+New `.png`, `.jpg`, `.jpeg`, and `.JPG` files will automatically be tracked by LFS.
+
 ## Deployment
 
 The site is deployed via GitHub Pages. Pushing to the `main` branch triggers an automatic build and deploy through CI/CD.
