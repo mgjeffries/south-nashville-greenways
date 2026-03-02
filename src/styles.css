@@ -729,6 +729,124 @@ footer {
     color: #2d5016;
 }
 
+/* Post Heading */
+.post-heading {
+    font-size: 1.7rem;
+    color: #2d5016;
+    margin: 40px 0 16px;
+}
+
+/* Image Comparison Slider */
+.image-comparison {
+    margin: 0 0 40px 0;
+    user-select: none;
+}
+
+.image-comparison-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: ew-resize;
+    touch-action: none;
+}
+
+.image-comparison-img {
+    display: block;
+    width: 100%;
+}
+
+.image-comparison-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-comparison-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: white;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.image-comparison-handle {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.image-comparison-caption {
+    display: block;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+/* Page Update Banner */
+.page-updates {
+    margin-top: 48px;
+    padding: 20px 24px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.page-updates h2 {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: left;
+}
+
+.page-updates-list {
+    list-style: none;
+}
+
+.page-update-item {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.page-update-item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.page-update-date {
+    font-size: 0.85rem;
+    color: #4a7c28;
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 130px;
+}
+
+.page-update-description {
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
 /* Map Overlay */
 .map-overlay {
     position: relative;

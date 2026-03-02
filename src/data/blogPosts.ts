@@ -12,6 +12,14 @@ export type BlogPostContent =
   | string
   | { type: 'callout'; text: string }
   | { type: 'image'; imageIndex: number; caption?: string }
+  | { type: 'heading'; level: 2 | 3; text: string }
+  | { type: 'image-comparison'; leftImageIndex: number; rightImageIndex: number; caption?: string }
+  | { type: 'paragraph-with-link'; text: string; linkText: string; url: string }
+
+export interface PageUpdate {
+  date: string
+  description: string
+}
 
 export interface BlogPost {
   slug: string
@@ -23,6 +31,7 @@ export interface BlogPost {
   summary: string
   content: BlogPostContent[]
   links?: BlogPostLink[]
+  pageUpdates?: PageUpdate[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -78,6 +87,14 @@ export const blogPosts: BlogPost[] = [
         src: '/images/blog/2026-02-28-antioch-pike-project-extents.png',
         alt: 'Map showing the Antioch Pike project extents',
       },
+      {
+        src: '/images/blog/2026-03-01-antioch-pike-large-buffers-concept.png',
+        alt: 'Design concept with wide buffers between the bike lane and traffic',
+      },
+      {
+        src: '/images/blog/2026-03-01-antioch-pike-center-median-concept.png',
+        alt: 'Design concept with a center median',
+      },
     ],
     heroCaption: 'Painted mural bikeway along Antioch Pike',
     summary:
@@ -85,6 +102,14 @@ export const blogPosts: BlogPost[] = [
     content: [
       'If you haven\'t already taken a stroll or bike ride down Antioch Pike I highly recommend it! The new murals are fun to see, and the new bike lanes have transformed the road. The installation shown was built by NDOT as a temporary Tactical Urbanism project, and they are currently making plans for a permanent installation. Try it out so you can give your feedback to NDOT, and take part in making South Nashville a great place to walk and bike!',
       { type: 'image', imageIndex: 1, caption: 'Map of current bikeway' },
+      { type: 'heading', level: 2, text: "Help Shape What's Next" },
+      {
+        type: 'paragraph-with-link',
+        text: "NDOT and the Civic Design Center are seeking community input on design concepts for the next phase of their design. One version features wide buffers between the bike lane and traffic, similar to the current installation, but with upgraded materials, and the other design features a center median. Both designs incorporate trees and grass. You can leave a digital comment anywhere on the map:",
+        linkText: 'Leave a comment on the design map',
+        url: 'https://platform.remix.com/project/0988282d/scenario/4420e749-ca2c-4921-9ef7-e9365d43c5ea',
+      },
+      { type: 'image-comparison', leftImageIndex: 2, rightImageIndex: 3, caption: 'Comparison of two proposed plans' },
     ],
     links: [
       {
@@ -94,6 +119,12 @@ export const blogPosts: BlogPost[] = [
       {
         label: 'Civic Design Center: Transforming Antioch Pike',
         url: 'https://www.civicdesigncenter.org/all-projects-blog/transforming-antioch-pike-a-collaborative-vision-for-a-healthier-safer-corridor',
+      },
+    ],
+    pageUpdates: [
+      {
+        date: 'March 2, 2026',
+        description: 'Added design concept comparison images and community input information for the next phase of Antioch Pike.',
       },
     ],
   },

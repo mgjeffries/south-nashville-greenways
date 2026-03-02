@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import Lightbox from './Lightbox.tsx'
 import AuthorBio from './AuthorBio.tsx'
+import ImageComparison from './ImageComparison.tsx'
+import PageUpdateBanner from './PageUpdateBanner.tsx'
 import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
 import { authors } from '../data/authors.ts'
 
@@ -10,6 +12,32 @@ function renderContent(item: BlogPostContent, i: number, images: { src: string; 
   }
   if (item.type === 'callout') {
     return <blockquote key={i} className="post-callout">{item.text}</blockquote>
+  }
+  if (item.type === 'heading') {
+    const Tag = `h${item.level}` as 'h2' | 'h3'
+    return <Tag key={i} className="post-heading">{item.text}</Tag>
+  }
+  if (item.type === 'paragraph-with-link') {
+    return (
+      <p key={i} className="post-body">
+        {item.text}{' '}
+        <a href={item.url} target="_blank" rel="noopener noreferrer">{item.linkText}</a>
+      </p>
+    )
+  }
+  if (item.type === 'image-comparison') {
+    const left = images[item.leftImageIndex]
+    const right = images[item.rightImageIndex]
+    return (
+      <ImageComparison
+        key={i}
+        leftSrc={left.src}
+        leftAlt={left.alt}
+        rightSrc={right.src}
+        rightAlt={right.alt}
+        caption={item.caption}
+      />
+    )
   }
   const image = images[item.imageIndex]
   return (
@@ -67,6 +95,7 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
           )}
 
           <AuthorBio author={authors[post.author]} />
+          {post.pageUpdates && <PageUpdateBanner updates={post.pageUpdates} />}
         </div>
       </div>
     </>
