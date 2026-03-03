@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Mail } from 'lucide-react'
 import ShareButton from '../components/ShareButton.tsx'
 
 interface ActionData {
@@ -24,7 +25,7 @@ export const actions: ActionData[] = [
   {
     number: 3,
     title: 'Join our mailing list!',
-    footer: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeILnoDo_7AW2XO_1t3JkMONesT7Be_XMU5J4G_fwhrDWkJhg/viewform?usp=dialog">Join Mailing List</a>,
+    footer: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeILnoDo_7AW2XO_1t3JkMONesT7Be_XMU5J4G_fwhrDWkJhg/viewform?usp=dialog"><Mail size={16} /> Join Mailing List</a>,
   },
   {
     number: 4,

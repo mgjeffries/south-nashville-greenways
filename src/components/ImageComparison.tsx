@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from 'react'
+import { ChevronsLeftRight } from 'lucide-react'
 
 interface ImageComparisonProps {
   leftSrc: string
@@ -64,7 +65,7 @@ export default function ImageComparison({ leftSrc, leftAlt, rightSrc, rightAlt, 
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
         >
-          <div className="image-comparison-handle">⟺</div>
+          <div className="image-comparison-handle"><ChevronsLeftRight size={20} /></div>
         </div>
       </div>
       {caption && <figcaption className="image-comparison-caption">{caption}</figcaption>}

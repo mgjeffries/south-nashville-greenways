@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ChevronRight, ExternalLink } from 'lucide-react'
 import Lightbox from './Lightbox.tsx'
 import AuthorBio from './AuthorBio.tsx'
 import ImageComparison from './ImageComparison.tsx'
@@ -62,7 +63,7 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
       <nav className="breadcrumbs">
         <div className="container">
           <Link to="/blog">Blog</Link>
-          <span className="breadcrumb-separator">/</span>
+          <ChevronRight size={14} className="breadcrumb-separator" />
           <span>{post.title}</span>
         </div>
       </nav>
@@ -86,7 +87,7 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
                 {post.links.map((link) => (
                   <li key={link.url}>
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      {link.label}
+                      {link.label} <ExternalLink size={14} />
                     </a>
                   </li>
                 ))}

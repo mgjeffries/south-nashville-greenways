@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link2, Check } from 'lucide-react'
 
 export default function ShareButton() {
   const [copied, setCopied] = useState(false)
@@ -22,7 +23,7 @@ export default function ShareButton() {
 
   return (
     <button className="cta-button share-btn" onClick={handleClick}>
-      {copied ? 'Copied!' : 'Copy Link'}
+      {copied ? <><Check size={16} /> Copied!</> : <><Link2 size={16} /> Copy Link</>}
     </button>
   )
 }
