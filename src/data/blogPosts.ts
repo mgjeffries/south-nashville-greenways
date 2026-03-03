@@ -6,6 +6,7 @@ export interface BlogPostLink {
 export interface BlogPostImage {
   src: string
   alt: string
+  includeOnCoverCard?: boolean
 }
 
 export type BlogPostContent =
@@ -44,10 +45,12 @@ export const blogPosts: BlogPost[] = [
       {
         src: '/images/blog/2026-03-01-east-thompson-design-concept.png',
         alt: 'Design concept for East Thompson Lane bikeways',
+        includeOnCoverCard: true,
       },
       {
         src: '/images/blog/2026-03-01-east-thompson-intersection.png',
         alt: 'Map showing traffic accidents at the Thompson and East Thompson intersection',
+        includeOnCoverCard: true,
       },
     ],
     heroCaption: 'NDOT design concept for East Thompson Lane',
@@ -82,10 +85,12 @@ export const blogPosts: BlogPost[] = [
       {
         src: '/images/blog/2026-02-22-antioch-pike.jpg',
         alt: 'A vibrant painted mural path along Antioch Pike featuring colorful floral designs',
+        includeOnCoverCard: true,
       },
       {
         src: '/images/blog/2026-02-28-antioch-pike-project-extents.png',
         alt: 'Map showing the Antioch Pike project extents',
+        includeOnCoverCard: true,
       },
       {
         src: '/images/blog/2026-03-01-antioch-pike-large-buffers-concept.png',
