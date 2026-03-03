@@ -120,11 +120,15 @@ export const blogPosts: BlogPost[] = [
         label: 'Civic Design Center: Transforming Antioch Pike',
         url: 'https://www.civicdesigncenter.org/all-projects-blog/transforming-antioch-pike-a-collaborative-vision-for-a-healthier-safer-corridor',
       },
+      {
+        label: 'Comment on the new design concepts',
+        url: 'https://platform.remix.com/project/0988282d/scenario/4420e749-ca2c-4921-9ef7-e9365d43c5ea'
+      }
     ],
     pageUpdates: [
       {
         date: 'March 2, 2026',
-        description: 'Added design concept comparison images and community input information for the next phase of Antioch Pike.',
+        description: 'Added new design concepts and link for community feedback',
       },
     ],
   },
