@@ -34,7 +34,7 @@ const post: BlogPost = {
     "A pedestrian was struck and killed by a vehicle on Antioch Pike on February 20th.  This location is tragically just past where the current tactical urbanism installation ends. Not knowing this had occurred, I biked through the intersection two days later while recording my ride.",
     { type: "image", imageIndex: 1 },
     "As I approached the intersection from Nolensville Pike turing East, I noticed that the painted crosswalks are mostly missing. I would like to see it re-painted to increase awareness of pedestrians.",
-    { type: "image", imageIndex: 2, caption: "Google maps 2026" },
+    { type: "image", imageIndex: 2, caption: "Older image from google maps" },
     "An overhead image from Google Maps captured in 2026 shows a painted median reducing the traffic turning onto Antioch Pike from Nolensville down to one lane. But when I turned onto the road it seems that this painted median has already been eroded since the Google image was taken. A patch has replaced the leading edge of the median, and the following portion is also missing.",
     { type: "image", imageIndex: 3, caption: "Patch covers painted median" },
     { type: "image", imageIndex: 4, caption: "Still no sign of the median" },
