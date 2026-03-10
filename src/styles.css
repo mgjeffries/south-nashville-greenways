@@ -624,7 +624,7 @@ footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
-    margin-top: 12px;
+    margin-bottom: 12px;
     flex-shrink: 0;
 }
 
@@ -632,7 +632,8 @@ footer {
     width: 100%;
     border-radius: 12px;
     display: block;
-    margin-bottom: 40px;
+    /* If there is a caption below the image this adds space between the image and the caption */
+    margin-bottom: 5px;
 }
 
 .post-body {
