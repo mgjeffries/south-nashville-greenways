@@ -27,6 +27,10 @@ const post: BlogPost = {
       src: "/images/blog/antioch-nolensville-fatality/median.png",
       alt: "The painted median on Antioch Pike is missing in sections",
     },
+    {
+      src: "/images/blog/antioch-nolensville-fatality/new-design-concept.png",
+      alt: "New design concept by NDOT and Civic Design Center",
+    },
   ],
   summary:
     "A pedestrian was struck and killed on Antioch Pike on February 20th. A visit to the intersection reveals missing crosswalk markings and an eroded painted median that need urgent repair.",
@@ -38,7 +42,8 @@ const post: BlogPost = {
     "An overhead image from Google Maps captured in 2026 shows a painted median reducing the traffic turning onto Antioch Pike from Nolensville down to one lane. But when I turned onto the road it seems that this painted median has already been eroded since the Google image was taken. A patch has replaced the leading edge of the median, and the following portion is also missing.",
     { type: "image", imageIndex: 3, caption: "Patch covers painted median" },
     { type: "image", imageIndex: 4, caption: "Still no sign of the median" },
-    "Without this median to narrow the road, my perception as a driver, or even a cyclist is that this is an area where it is safe to go fast, when in fact there is a pedestrian crossing between a large apartment complex and a local grocery store just a few feet ahead. I think that it’s important to repaint this median in the short term, and in the long term I’d like to see a permanent median installed in this intersection. ",
+    "Without this median to narrow the road, my perception as a driver, or even a cyclist is that this is an area where it is safe to go fast, when in fact there is a pedestrian crossing between a large apartment complex and a local grocery store just a few feet ahead. I think that it’s important to repaint this median in the short term, and in the long term I’d like to see a permanent median installed. The new design concepts by NDOT and the Civic Design Center show a permanent median at this intersection. I would love to see this installed as soon as possible.",
+    { type: "image", imageIndex: 5, caption: "New design concept by NDOT and Civic Design Center" },
     {
       type: "callout",
       text: "I’m calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it permanent and visible. A pedestrian has already lost their life here. These are low-cost, high-impact fixes that can prevent the next tragedy.",
@@ -53,7 +58,17 @@ const post: BlogPost = {
       label: "Vehicle Crash Map",
       url: 'https://www.nashville.gov/departments/police/data-dashboard/vehicle-crashes-map',
     },
+    {
+      label: 'Design Concept by Civic Design Center and NDOT for next phase of Antioch Pike',
+      url: 'https://platform.remix.com/project/0988282d/scenario/4420e749-ca2c-4921-9ef7-e9365d43c5ea',
+    },
   ],
+  pageUpdates: [
+    {
+      date: 'March 10, 9:38 am',
+      description: 'Added new design concept image',
+    }
+  ]
 };
 
 export default post;
