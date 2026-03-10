@@ -38,7 +38,7 @@ const post: BlogPost = {
     'An overhead image from Google Maps captured in 2026 shows a painted median reducing the traffic turning onto Antioch Pike from Nolensville down to one lane. But when I turned onto the road it seems that this painted median has already been eroded since the Google image was taken. A patch has replaced the leading edge of the median, and the following portion is also missing.',
     { type: 'image', imageIndex: 3, caption: "Patch covers painted median" },
     { type: 'image', imageIndex: 4, caption: "Still no sign of the median" },
-    'I hope that Nashville will act quickly to repair these issues and protect people walking and biking in the city.',
+    "Without this median to narrow the road, my perception as a driver, or even a cyclist is that this is an area where it is safe to go fast, when in fact there is a pedestrian crossing between a large apartment complex and a local grocery store just a few feet ahead. I think that it’s important to repaint this median in the short term, and in the long term I’d like to see a permanent median installed in this intersection. "
   ],
 }
 
