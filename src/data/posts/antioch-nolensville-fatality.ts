@@ -31,7 +31,7 @@ const post: BlogPost = {
   summary:
     "A pedestrian was struck and killed on Antioch Pike on February 20th. A visit to the intersection reveals missing crosswalk markings and an eroded painted median that need urgent repair.",
   content: [
-    "A pedestrian was struck and killed by a vehicle on Antioch Pike on February 20th.  This location tragically just past where the current tactical urbanism installation ends. Not knowing this had occurred, I biked through the intersection two days later while recording my ride.",
+    "A pedestrian was struck and killed by a vehicle on Antioch Pike on February 20th.  This location is tragically just past where the current tactical urbanism installation ends. Not knowing this had occurred, I biked through the intersection two days later while recording my ride.",
     { type: "image", imageIndex: 1 },
     "As I approached the intersection from Nolensville Pike heading East, I noticed that the painted crosswalks are mostly missing. I would like to see it re-painted to increase awareness of pedestrians.",
     { type: "image", imageIndex: 2, caption: "Google maps 2026" },
