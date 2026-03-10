@@ -44,6 +44,16 @@ const post: BlogPost = {
       text: "I’m calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it permanent and visible. A pedestrian has already lost their life here. These are low-cost, high-impact fixes that can prevent the next tragedy.",
     },
   ],
+  links: [
+    {
+      label: "Police Media Release",
+      url: 'https://www.nashville.gov/departments/police/news/77-year-old-man-fatally-struck-fridays-hit-and-run-antioch-pike',
+    },
+    {
+      label: "Vehicle Crash Map",
+      url: 'https://www.nashville.gov/departments/police/data-dashboard/vehicle-crashes-map',
+    },
+  ],
 };
 
 export default post;
