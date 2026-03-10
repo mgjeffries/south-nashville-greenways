@@ -7,21 +7,21 @@ const post: BlogPost = {
   date: 'February 28, 2026',
   images: [
     {
-      src: '/images/blog/2026-02-22-antioch-pike.jpg',
+      src: '/images/blog/antioch-pike/mural.jpg',
       alt: 'A vibrant painted mural path along Antioch Pike featuring colorful floral designs',
       includeOnCoverCard: true,
     },
     {
-      src: '/images/blog/2026-02-28-antioch-pike-project-extents.png',
+      src: '/images/blog/antioch-pike/project-extents.png',
       alt: 'Map showing the Antioch Pike project extents',
       includeOnCoverCard: true,
     },
     {
-      src: '/images/blog/2026-03-01-antioch-pike-large-buffers-concept.png',
+      src: '/images/blog/antioch-pike/large-buffers-concept.png',
       alt: 'Design concept with wide buffers between the bike lane and traffic',
     },
     {
-      src: '/images/blog/2026-03-01-antioch-pike-center-median-concept.png',
+      src: '/images/blog/antioch-pike/center-median-concept.png',
       alt: 'Design concept with a center median',
     },
   ],

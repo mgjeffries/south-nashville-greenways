@@ -7,20 +7,20 @@ const post: BlogPost = {
   date: 'March 9, 2026',
   images: [
     {
-      src: '/images/blog/2026-03-09-antioch-and-nolenville-fatality.png',
+      src: '/images/blog/antioch-nolensville-fatality/scene.png',
       alt: 'View of the Antioch Pike and Nolensville Pike intersection where a pedestrian was killed',
       includeOnCoverCard: true,
     },
     {
-      src: '/images/blog/2026-03-09-antioch-and-nolenville-fatality-overhead.png',
+      src: '/images/blog/antioch-nolensville-fatality/overhead.png',
       alt: 'Overhead view from Google Maps showing a painted median reducing turning traffic onto Antioch Pike to one lane',
     },
     {
-      src: '/images/blog/2026-02-22-antioch-and-nolenville-fatality-patch.png',
+      src: '/images/blog/antioch-nolensville-fatality/patch.png',
       alt: 'A patch has replaced the leading edge of the painted median on Antioch Pike',
     },
     {
-      src: '/images/blog/2026-02-22-antioch-and-nolenville-fatality-median.png',
+      src: '/images/blog/antioch-nolensville-fatality/median.png',
       alt: 'The painted median on Antioch Pike is missing in sections',
     },
   ],

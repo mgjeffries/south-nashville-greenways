@@ -7,12 +7,12 @@ const post: BlogPost = {
   date: 'March 1, 2026',
   images: [
     {
-      src: '/images/blog/2026-03-01-east-thompson-design-concept.png',
+      src: '/images/blog/east-thompson/design-concept.png',
       alt: 'Design concept for East Thompson Lane bikeways',
       includeOnCoverCard: true,
     },
     {
-      src: '/images/blog/2026-03-01-east-thompson-intersection.png',
+      src: '/images/blog/east-thompson/intersection.png',
       alt: 'Map showing traffic accidents at the Thompson and East Thompson intersection',
       includeOnCoverCard: true,
     },
