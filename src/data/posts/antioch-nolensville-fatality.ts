@@ -46,7 +46,7 @@ const post: BlogPost = {
     { type: "image", imageIndex: 5, caption: "New design concept by NDOT and Civic Design Center" },
     {
       type: "callout",
-      text: "I’m calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it permanent and visible. A pedestrian has already lost their life here. These are fast, high-impact fixes that can prevent the next tragedy.",
+      text: "I’m calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it visible. A pedestrian has already lost their life here. These are fast, high-impact fixes that can prevent the next tragedy.",
     },
   ],
   links: [
