@@ -31,6 +31,10 @@ const post: BlogPost = {
       src: "/images/blog/antioch-nolensville-fatality/new-design-concept.png",
       alt: "New design concept by NDOT and Civic Design Center",
     },
+    {
+      src: "/images/blog/antioch-nolensville-fatality/2026-03-14-repaving.JPG",
+      alt: "Repaving work at the Antioch Pike and Nolensville Pike intersection",
+    },
   ],
   summary:
     "A pedestrian was struck and killed on Antioch Pike on February 20th. A visit to the intersection reveals missing crosswalk markings and an eroded painted median that need urgent repair.",
@@ -48,6 +52,9 @@ const post: BlogPost = {
       type: "callout",
       text: "I’m calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it visible. A pedestrian has already lost their life here. These are fast, high-impact fixes that can prevent the next tragedy.",
     },
+    { type: "heading", level: 2, text: "Update: Repaving in Progress!" },
+    "While walking by the area on Saturday March 14th I noticed construction vehicles getting ready for work. They are repaving the area that had been patched, and will have to re-paint the Antioch Pike portion of the intersection. I was told that the contractor doing the work doesn’t get paid until work is complete, so I’m hopeful that the paint will be applied soon!",
+    { type: "image", imageIndex: 6, caption: "Repaving work at the intersection on March 14th" },
   ],
   links: [
     {
@@ -67,7 +74,11 @@ const post: BlogPost = {
     {
       date: 'March 10, 9:38 am',
       description: 'Added new design concept image',
-    }
+    },
+    {
+      date: 'March 14',
+      description: 'Added image of repaving work at the intersection',
+    },
   ]
 };
 
