@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
-import { ChevronRight, ExternalLink } from 'lucide-react'
+import { useEffect } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
+import { ChevronRight, ExternalLink, Link2 } from 'lucide-react'
 import Lightbox from './Lightbox.tsx'
 import AuthorBio from './AuthorBio.tsx'
 import ImageComparison from './ImageComparison.tsx'
@@ -7,7 +8,7 @@ import PageUpdateBanner from './PageUpdateBanner.tsx'
 import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
 import { authors } from '../data/authors.ts'
 
-function renderContent(item: BlogPostContent, i: number, images: { src: string; alt: string }[]) {
+function renderContent(item: BlogPostContent, i: number, images: { src: string; alt: string }[], onHeadingClick: (id: string) => void) {
   if (typeof item === 'string') {
     return <p key={i} className="post-body">{item}</p>
   }
@@ -16,7 +17,19 @@ function renderContent(item: BlogPostContent, i: number, images: { src: string; 
   }
   if (item.type === 'heading') {
     const Tag = `h${item.level}` as 'h2' | 'h3'
-    return <Tag key={i} className="post-heading">{item.text}</Tag>
+    const id = item.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    function handleAnchorClick(e: React.MouseEvent) {
+      e.preventDefault()
+      onHeadingClick(id)
+    }
+    return (
+      <Tag key={i} id={id} className="post-heading">
+        <a href={`#${id}`} className="post-heading-anchor" aria-label="Link to section" onClick={handleAnchorClick}>
+          <Link2 size={18} />
+        </a>
+        {item.text}
+      </Tag>
+    )
   }
   if (item.type === 'paragraph-with-link') {
     return (
@@ -50,6 +63,21 @@ function renderContent(item: BlogPostContent, i: number, images: { src: string; 
 
 export default function BlogPostDetail({ slug }: { slug: string }) {
   const post = blogPosts.find((p) => p.slug === slug)!
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  useEffect(() => {
+    const section = searchParams.get('section')
+    if (section) {
+      setTimeout(() => {
+        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }, [])
+
+  function handleHeadingClick(id: string) {
+    setSearchParams({ section: id }, { replace: true })
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <>
@@ -78,7 +106,7 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
             />
           </Lightbox>
 
-          {post.content.map((item, i) => renderContent(item, i, post.images))}
+          {post.content.map((item, i) => renderContent(item, i, post.images, handleHeadingClick))}
 
           {post.links && post.links.length > 0 && (
             <section className="learn-more">

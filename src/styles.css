@@ -835,6 +835,21 @@ footer {
     font-size: 1.7rem;
     color: #2d5016;
     margin: 40px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-heading-anchor {
+    color: #2d5016;
+    opacity: 0;
+    transition: opacity 0.15s;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.post-heading:hover .post-heading-anchor {
+    opacity: 1;
 }
 
 /* Image Comparison Slider */
