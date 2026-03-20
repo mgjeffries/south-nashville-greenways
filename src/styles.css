@@ -991,3 +991,28 @@ footer {
     bottom: 10%;
 }
 
+/* Events Page */
+.calendar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.calendar-wrapper iframe {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-subscribe {
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.calendar-subscribe p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+

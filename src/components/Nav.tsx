@@ -15,6 +15,9 @@ export default function Nav() {
           </NavLink>
           <ul className="nav-links">
             <li>
+              <NavLink to="/events">Events</NavLink>
+            </li>
+            <li>
               <NavLink to="/blog">Blog</NavLink>
             </li>
             <li>
