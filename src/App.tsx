@@ -8,6 +8,7 @@ import BlogPage from './pages/BlogPage.tsx'
 import AntiochPikePage from './pages/AntiochPikePage.tsx'
 import AntiochNolensFatalityPage from './pages/AntiochNolensFatalityPage.tsx'
 import EastThompsonPage from './pages/EastThompsonPage.tsx'
+import EventsPage from './pages/EventsPage.tsx'
 import { usePageTracking } from './hooks/usePageTracking.ts'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/blog/antioch-pike" element={<AntiochPikePage />} />
         <Route path="/blog/antioch-nolensville-fatality" element={<AntiochNolensFatalityPage />} />
         <Route path="/blog/east-thompson" element={<EastThompsonPage />} />
+        <Route path="/events" element={<EventsPage />} />
       </Routes>
       <Footer />
     </>
