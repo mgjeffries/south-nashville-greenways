@@ -4,7 +4,7 @@ export default function EventsPage() {
       <div className="about-hero">
         <div className="container">
           <h1>Events</h1>
-          <p>Stay up to date on community meetings, walks, and advocacy opportunities.</p>
+          <p>We're hosting easy fun group bike rides during the summer of 2026!</p>
         </div>
       </div>
 
