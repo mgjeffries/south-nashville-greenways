@@ -62,6 +62,22 @@ body {
     color: #f97316;
 }
 
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.hamburger-btn:hover {
+    color: #f97316;
+}
+
 /* QR Code Modal */
 .qr-backdrop {
     position: fixed;
@@ -648,6 +664,46 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1f2937;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+
+    .nav-links li,
+    .nav-links .qr-btn {
+        width: 100%;
+    }
+
+    .nav-links a,
+    .nav-links .qr-btn {
+        display: block;
+        padding: 12px 20px;
+    }
+
+    .nav-links .qr-btn {
+        justify-content: flex-start;
+    }
+
+    .site-nav {
+        position: relative;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
