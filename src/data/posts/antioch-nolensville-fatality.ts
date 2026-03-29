@@ -43,6 +43,10 @@ const post: BlogPost = {
         src: "/images/blog/antioch-nolensville-fatality/delieneators-installed.JPG",
         alt: "5 delineators installed",
     },
+    {
+        src: "/images/blog/antioch-nolensville-fatality/03-25-missing-crosswalks-and-median.JPG",
+        alt: "Crosswalks and median are still missing after repaving",
+    },
   ],
   summary:
     "A pedestrian was struck and killed on Antioch Pike on February 20th. A visit to the intersection reveals missing crosswalk markings and an eroded painted median that need urgent repair.",
@@ -69,6 +73,8 @@ const post: BlogPost = {
     { type: "image", imageIndex: 8, caption: "The 5 delineators installed" },
     { type: "heading", level: 2, text: "Remaining issues" },
     "The painted median and crosswalks are still missing from the area that has been repaved, and the 5 delineators that were installed leave a car-sized gap in the the pedestrian refuge area.",
+    { type: "image", imageIndex: 9, caption: "The crosswalks and median are still missing after repaving" },
+    { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP" },
   ],
   links: [
     {
