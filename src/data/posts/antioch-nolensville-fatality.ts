@@ -35,6 +35,14 @@ const post: BlogPost = {
       src: "/images/blog/antioch-nolensville-fatality/2026-03-14-repaving.JPG",
       alt: "Repaving work at the Antioch Pike and Nolensville Pike intersection",
     },
+    {
+        src: "/images/blog/antioch-nolensville-fatality/delineator-installation.JPG",
+        alt: "Crew installing delineators",
+    },
+    {
+        src: "/images/blog/antioch-nolensville-fatality/delieneators-installed.JPG",
+        alt: "5 delineators installed",
+    },
   ],
   summary:
     "A pedestrian was struck and killed on Antioch Pike on February 20th. A visit to the intersection reveals missing crosswalk markings and an eroded painted median that need urgent repair.",
@@ -52,9 +60,13 @@ const post: BlogPost = {
       type: "callout",
       text: "I’m calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it visible. A pedestrian has already lost their life here. These are fast, high-impact fixes that can prevent the next tragedy.",
     },
-    { type: "heading", level: 2, text: "Update: Repaving in Progress!" },
+    { type: "heading", level: 2, text: "March 14th: Repaving in Progress!" },
     "While walking by the area on Saturday March 14th I noticed construction vehicles getting ready for work. They are repaving the area that had been patched, and will have to re-paint the Antioch Pike portion of the intersection. I was told that the contractor doing the work doesn’t get paid until work is complete, so I’m hopeful that the paint will be applied soon!",
     { type: "image", imageIndex: 6, caption: "Repaving work at the intersection on March 14th" },
+    { type: "heading", level: 2, text: "March 25th: First Delineators Installed!" },
+    "A crew installed 5 delineators at the intersection in under 30 minutes. It's great to see progress being made here.",
+    { type: "image", imageIndex: 7, caption: "Delineators installed at the intersection on March 25th" },
+    { type: "image", imageIndex: 8, caption: "The 5 delineators installed" },
   ],
   links: [
     {
