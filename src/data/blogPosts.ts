@@ -39,9 +39,11 @@ export interface BlogPost {
 import antiochNolensvilleFatality from './posts/antioch-nolensville-fatality.ts'
 import eastThompson from './posts/east-thompson.ts'
 import antiochPike from './posts/antioch-pike.ts'
+import thompson2026 from './posts/thompson-2026.ts'
 
 export const blogPosts: BlogPost[] = [
   antiochNolensvilleFatality,
   eastThompson,
   antiochPike,
+  thompson2026,
 ]
