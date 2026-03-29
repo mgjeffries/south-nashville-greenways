@@ -74,7 +74,7 @@ const post: BlogPost = {
     { type: "heading", level: 2, text: "Remaining issues" },
     "The painted median and crosswalks are still missing from the area that has been repaved, and the 5 delineators that were installed leave a car-sized gap in the the pedestrian refuge area.",
     { type: "image", imageIndex: 9, caption: "The crosswalks and median are still missing after repaving" },
-    { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP" },
+    { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP. This photo was taken on March 25th, over one month after Jerry Robinson was killed." },
   ],
   links: [
     {
