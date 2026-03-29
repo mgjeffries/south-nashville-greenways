@@ -59,7 +59,7 @@ function renderContent(item: BlogPostContent, i: number, onHeadingClick: (id: st
     return null
   }
   return (
-    <Lightbox key={i} src={item.src} alt={item.alt} caption={item.caption}>
+    <Lightbox key={i} src={item.src} alt={item.alt} caption={item.caption} sourceUrl={item.sourceUrl}>
       <img className="post-hero-image" src={item.src} alt={item.alt} />
     </Lightbox>
   )
