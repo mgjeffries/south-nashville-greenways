@@ -16,6 +16,7 @@ export type BlogPostContent =
   | { type: 'heading'; level: 2 | 3; text: string }
   | { type: 'image-comparison'; leftImageIndex: number; rightImageIndex: number; caption?: string }
   | { type: 'paragraph-with-link'; text: string; linkText: string; url: string }
+  | { type: 'markdown'; text: string }
 
 export interface PageUpdate {
   date: string

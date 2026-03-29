@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 import { Link, useSearchParams } from 'react-router-dom'
 import { ChevronRight, ExternalLink, Link2 } from 'lucide-react'
 import Lightbox from './Lightbox.tsx'
@@ -52,6 +53,9 @@ function renderContent(item: BlogPostContent, i: number, images: { src: string; 
         caption={item.caption}
       />
     )
+  }
+  if (item.type === 'markdown') {
+    return <div key={i} className="post-body"><ReactMarkdown>{item.text}</ReactMarkdown></div>
   }
   const image = images[item.imageIndex]
   return (
