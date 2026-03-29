@@ -19,7 +19,7 @@ const post: BlogPost = {
     { type: 'image', src: '/images/blog/thompson-2026/2026-03-29-chym-map.png', alt: 'CHYM Complete Streets project tracker', caption: 'Choose How You Move Tracker' },
     "I find this project especially exciting because this route is on my way to a lot of local businesses: grocery store, home goods, rock climbing gym, and my wife's workplace. It also currently features some of the most impassable terrain, such as this stretch with cars driving at lethal speeds, no shoulder, and a rocky ditch.",
     { type: 'image', src: '/images/blog/thompson-2026/ditch.png', alt: 'Ditch along Thompson Lane', caption: 'Current state of Thompson Lane' },
-    { type: 'callout', text: "I'm delighted to see this project moving forward. My only concern is that I don't want it to get delayed. I would ask that as residents of South Nashville we support and advocate for this project. It requires collaboration between NDOT and TDOT, and I'm sure it will help if they know that the people who live in this area support the project." },
+    { type: 'callout', text: "What are your thoughts on this project? If you’d like to be involved in providing community support and feedback for this, please reach out using my email below!" },
   ],
 }
 
