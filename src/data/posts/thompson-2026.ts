@@ -8,7 +8,7 @@ const post: BlogPost = {
   summary:
     'Protected bike lanes are coming to Thompson Lane between Nolensville and Powell this year, with a longer-term Complete Streets project also in the pipeline for South Nashville.',
   content: [
-    "There has been a lot of community engagement around the East Thompson Lane Multimodal project, and I'm excited for that, but construction on that project is not scheduled for this year. What is scheduled for work this year is a protected bike lane on Thompson between Nolensville and Powell!",
+    { type: "markdown", text: "There has been a lot of community engagement around the East Thompson Lane Multimodal project, and I'm excited for that, but construction on that project is not scheduled for this year. What **is** scheduled for work this year is a protected bike lane on Thompson between Nolensville and Powell!" },
     { type: 'image', src: '/images/blog/thompson-2026/20206-03-29-neighborhood-improvement-tracker.png', alt: 'Nashville neighborhood improvement tracker showing Thompson Lane project', includeOnCoverCard: true, caption: 'Nashville neighborhood improvement tracker', sourceUrl: 'https://experience.arcgis.com/experience/d7026b3c1ab1465396bc58531d668f8a/page/Page?views=Filter#data_s=id%3AdataSource_1-192d5ca6b51-layer-10%3A1146' },
     "I've been in discussion with NDOT Public information coordinator Brendan Scully about this project. Here's how he describes it:",
     {
