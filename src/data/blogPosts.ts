@@ -3,19 +3,12 @@ export interface BlogPostLink {
   url: string
 }
 
-export interface BlogPostImage {
-  src: string
-  alt: string
-  includeOnCoverCard?: boolean
-  isHeroImage?: boolean
-}
-
 export type BlogPostContent =
   | string
   | { type: 'callout'; text: string }
-  | { type: 'image'; imageIndex: number; caption?: string }
+  | { type: 'image'; src: string; alt: string; caption?: string; isHeroImage?: boolean; includeOnCoverCard?: boolean }
   | { type: 'heading'; level: 2 | 3; text: string }
-  | { type: 'image-comparison'; leftImageIndex: number; rightImageIndex: number; caption?: string }
+  | { type: 'image-comparison'; left: { src: string; alt: string }; right: { src: string; alt: string }; caption?: string }
   | { type: 'paragraph-with-link'; text: string; linkText: string; url: string }
   | { type: 'markdown'; text: string }
 
@@ -29,8 +22,6 @@ export interface BlogPost {
   title: string
   author: string
   date: string
-  images: BlogPostImage[]
-  heroCaption?: string
   summary: string
   content: BlogPostContent[]
   links?: BlogPostLink[]

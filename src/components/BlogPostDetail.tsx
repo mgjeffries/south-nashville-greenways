@@ -9,7 +9,7 @@ import PageUpdateBanner from './PageUpdateBanner.tsx'
 import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
 import { authors } from '../data/authors.ts'
 
-function renderContent(item: BlogPostContent, i: number, images: { src: string; alt: string }[], onHeadingClick: (id: string) => void) {
+function renderContent(item: BlogPostContent, i: number, onHeadingClick: (id: string) => void) {
   if (typeof item === 'string') {
     return <p key={i} className="post-body">{item}</p>
   }
@@ -41,15 +41,13 @@ function renderContent(item: BlogPostContent, i: number, images: { src: string; 
     )
   }
   if (item.type === 'image-comparison') {
-    const left = images[item.leftImageIndex]
-    const right = images[item.rightImageIndex]
     return (
       <ImageComparison
         key={i}
-        leftSrc={left.src}
-        leftAlt={left.alt}
-        rightSrc={right.src}
-        rightAlt={right.alt}
+        leftSrc={item.left.src}
+        leftAlt={item.left.alt}
+        rightSrc={item.right.src}
+        rightAlt={item.right.alt}
         caption={item.caption}
       />
     )
@@ -57,10 +55,12 @@ function renderContent(item: BlogPostContent, i: number, images: { src: string; 
   if (item.type === 'markdown') {
     return <div key={i} className="post-body"><ReactMarkdown>{item.text}</ReactMarkdown></div>
   }
-  const image = images[item.imageIndex]
+  if (item.type === 'image' && item.isHeroImage) {
+    return null
+  }
   return (
-    <Lightbox key={i} src={image.src} alt={image.alt} caption={item.caption}>
-      <img className="post-hero-image" src={image.src} alt={image.alt} />
+    <Lightbox key={i} src={item.src} alt={item.alt} caption={item.caption}>
+      <img className="post-hero-image" src={item.src} alt={item.alt} />
     </Lightbox>
   )
 }
@@ -102,17 +102,16 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
 
       <div className="section">
         <div className="container post-detail">
-          {(() => { const heroImage = post.images.find(img => img.isHeroImage); return heroImage && (
-            <Lightbox src={heroImage.src} alt={heroImage.alt} caption={post.heroCaption}>
-              <img
-                className="post-hero-image"
-                src={heroImage.src}
-                alt={heroImage.alt}
-              />
-            </Lightbox>
-          );})()}
+          {(() => {
+            const heroImage = post.content.find(item => typeof item === 'object' && item.type === 'image' && item.isHeroImage) as { src: string; alt: string; caption?: string } | undefined
+            return heroImage && (
+              <Lightbox src={heroImage.src} alt={heroImage.alt} caption={heroImage.caption}>
+                <img className="post-hero-image" src={heroImage.src} alt={heroImage.alt} />
+              </Lightbox>
+            )
+          })()}
 
-          {post.content.map((item, i) => renderContent(item, i, post.images, handleHeadingClick))}
+          {post.content.map((item, i) => renderContent(item, i, handleHeadingClick))}
 
           {post.links && post.links.length > 0 && (
             <section className="learn-more">
