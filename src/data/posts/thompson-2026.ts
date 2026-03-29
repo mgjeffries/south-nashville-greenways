@@ -7,12 +7,12 @@ const post: BlogPost = {
   date: 'March 29, 2026',
   images: [
     {
-      src: '/images/blog/thompson-2026/neighborhood-improvement-tracker.png',
+      src: '/images/blog/thompson-2026/20206-03-29-neighborhood-improvement-tracker.png',
       alt: 'Nashville neighborhood improvement tracker showing Thompson Lane project',
       includeOnCoverCard: true,
     },
     {
-      src: '/images/blog/thompson-2026/chym-tracker.png',
+      src: '/images/blog/thompson-2026/2026-03-29-chym-map.png',
       alt: 'CHYM Complete Streets project tracker',
     },
   ],
