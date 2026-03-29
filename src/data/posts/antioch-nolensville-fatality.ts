@@ -10,6 +10,7 @@ const post: BlogPost = {
       src: "/images/blog/antioch-nolensville-fatality/scene.png",
       alt: "View of the Antioch Pike and Nolensville Pike intersection where a pedestrian was killed",
       includeOnCoverCard: true,
+      isHeroImage: true,
     },
     {
       src: "/images/blog/antioch-nolensville-fatality/crosswalk.png",

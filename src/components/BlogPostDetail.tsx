@@ -102,13 +102,15 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
 
       <div className="section">
         <div className="container post-detail">
-          <Lightbox src={post.images[0].src} alt={post.images[0].alt} caption={post.heroCaption}>
-            <img
-              className="post-hero-image"
-              src={post.images[0].src}
-              alt={post.images[0].alt}
-            />
-          </Lightbox>
+          {(() => { const heroImage = post.images.find(img => img.isHeroImage); return heroImage && (
+            <Lightbox src={heroImage.src} alt={heroImage.alt} caption={post.heroCaption}>
+              <img
+                className="post-hero-image"
+                src={heroImage.src}
+                alt={heroImage.alt}
+              />
+            </Lightbox>
+          );})()}
 
           {post.content.map((item, i) => renderContent(item, i, post.images, handleHeadingClick))}
 

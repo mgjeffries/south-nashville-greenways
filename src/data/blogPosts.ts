@@ -7,6 +7,7 @@ export interface BlogPostImage {
   src: string
   alt: string
   includeOnCoverCard?: boolean
+  isHeroImage?: boolean
 }
 
 export type BlogPostContent =

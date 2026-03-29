@@ -10,6 +10,7 @@ const post: BlogPost = {
       src: '/images/blog/east-thompson/design-concept.png',
       alt: 'Design concept for East Thompson Lane bikeways',
       includeOnCoverCard: true,
+      isHeroImage: true,
     },
     {
       src: '/images/blog/east-thompson/intersection.png',

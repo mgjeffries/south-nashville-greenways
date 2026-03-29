@@ -10,6 +10,7 @@ const post: BlogPost = {
       src: '/images/blog/antioch-pike/mural.jpg',
       alt: 'A vibrant painted mural path along Antioch Pike featuring colorful floral designs',
       includeOnCoverCard: true,
+      isHeroImage: true,
     },
     {
       src: '/images/blog/antioch-pike/project-extents.png',
