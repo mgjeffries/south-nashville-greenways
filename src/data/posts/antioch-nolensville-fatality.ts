@@ -67,6 +67,8 @@ const post: BlogPost = {
     "A crew installed 5 delineators at the intersection in under 30 minutes. It's great to see progress being made here.",
     { type: "image", imageIndex: 7, caption: "Delineators installed at the intersection on March 25th" },
     { type: "image", imageIndex: 8, caption: "The 5 delineators installed" },
+    { type: "heading", level: 2, text: "Remaining issues" },
+    "The painted median and crosswalks are still missing from the area that has been repaved, and the 5 delineators that were installed leave a car-sized gap in the the pedestrian refuge area.",
   ],
   links: [
     {
@@ -90,6 +92,10 @@ const post: BlogPost = {
     {
       date: 'March 14',
       description: 'Added image of repaving work at the intersection',
+    },
+    {
+      date: 'March 29',
+      description: 'Added images of new delineators that were installed on March 25th.',
     },
   ]
 };
