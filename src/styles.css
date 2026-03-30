@@ -798,6 +798,19 @@ footer {
     margin-bottom: 40px;
 }
 
+.post-body blockquote {
+    border-left: 4px solid #bdbdbd;
+    margin: 0 0 16px 0;
+    padding: 8px 2rem;
+    color: #555;
+    font-style: italic;
+}
+
+.post-body blockquote ul,
+.post-body blockquote ol {
+    padding-left: 2rem;
+}
+
 .post-callout {
     background: #fff8e1;
     border-left: 4px solid #f57c00;

@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import type { BlogPost } from '../data/blogPosts'
 
-export default function BlogCard({ slug, title, date, images, summary }: BlogPost) {
-  const cardImages = images.filter((img) => img.includeOnCoverCard)
-  if (cardImages.length === 0) cardImages.push(images[0])
+export default function BlogCard({ slug, title, date, content, summary }: BlogPost) {
+  const allImages = content.filter((item): item is { type: 'image'; src: string; alt: string; includeOnCoverCard?: boolean } =>
+    typeof item === 'object' && item.type === 'image'
+  )
+  const cardImages = allImages.filter((img) => img.includeOnCoverCard)
+  if (cardImages.length === 0 && allImages.length > 0) cardImages.push(allImages[0])
   return (
     <Link to={`/blog/${slug}`} className="blog-card-link">
       <article className="blog-card">

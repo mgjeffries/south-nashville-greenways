@@ -13,8 +13,8 @@ export default function BlogPage() {
 
       <div className="section">
         <div className="container">
-          <div className="blog-grid">
-            {blogPosts.map((post) => (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+            {[...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
               <BlogCard key={post.slug} {...post} />
             ))}
           </div>
