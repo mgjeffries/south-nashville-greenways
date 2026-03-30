@@ -15,10 +15,17 @@ import { usePageTracking } from './hooks/usePageTracking.ts'
 function App() {
   usePageTracking()
 
+  const isTestingEnvironment = window.location.hostname !== 'south-nashville-greenways.org'
+
   return (
     <>
       <ScrollToTop />
       <Nav />
+      {isTestingEnvironment && (
+        <div style={{ background: '#fde047', color: '#713f12', textAlign: 'center', padding: '8px', fontSize: '0.875rem', fontWeight: 500 }}>
+          This is a testing environment
+        </div>
+      )}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
