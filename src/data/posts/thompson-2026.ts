@@ -4,7 +4,7 @@ const post: BlogPost = {
   slug: 'thompson-2026',
   title: 'Improvements are coming to Thompson Lane this year!',
   author: 'gib-jeffries',
-  date: 'March 29, 2026',
+  date: 'March 30, 2026',
   summary:
     'Protected bike lanes are coming to Thompson Lane between Nolensville and Powell this year, with a longer-term Complete Streets project also in the pipeline for South Nashville.',
   content: [
