@@ -549,6 +549,23 @@ footer {
     overflow: hidden;
 }
 
+.events-hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.events-hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.events-hero-photos {
+    flex: 1;
+    min-width: 0;
+}
+
 .about-hero h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -718,6 +735,15 @@ footer {
 
     .about-hero h1 {
         font-size: 2.2rem;
+    }
+
+    .events-hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .events-hero-photos .carousel-track {
+        max-height: 220px;
     }
 
     .carousel-btn {

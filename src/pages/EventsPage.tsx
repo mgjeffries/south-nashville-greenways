@@ -10,14 +10,17 @@ export default function EventsPage() {
   return (
     <>
       <div className="about-hero">
-        <div className="container">
-          <h1>Events</h1>
-          <p>We're hosting easy, fun group bike rides during the summer of 2026!</p>
-          <p>Everyone is welcome!</p>
+        <div className="container events-hero-inner">
+          <div className="events-hero-text">
+            <h1>Events</h1>
+            <p>We're hosting easy, fun group bike rides during the summer of 2026!</p>
+            <p>Everyone is welcome!</p>
+          </div>
+          <div className="events-hero-photos">
+            <Carousel slides={eventPhotos} />
+          </div>
         </div>
       </div>
-
-      
 
       <div className="section">
         <div className="container">
@@ -45,11 +48,6 @@ export default function EventsPage() {
         </div>
       </div>
 
-      <div className="section">
-        <div className="container">
-          <Carousel slides={eventPhotos} />
-        </div>
-      </div>
     </>
   )
 }
