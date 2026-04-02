@@ -1,3 +1,11 @@
+import Carousel from '../components/Carousel'
+
+const eventPhotos = [
+  { src: '/images/events/group-neighborhood.jpg', alt: 'Group bike ride through the neighborhood' },
+  { src: '/images/events/group-antioch.jpg', alt: 'Group bike ride along Antioch' },
+  { src: '/images/events/bikes-tacos.JPG', alt: 'Bikes and tacos after the ride' },
+]
+
 export default function EventsPage() {
   return (
     <>
@@ -8,6 +16,8 @@ export default function EventsPage() {
           <p>Everyone is welcome!</p>
         </div>
       </div>
+
+      
 
       <div className="section">
         <div className="container">
@@ -32,6 +42,12 @@ export default function EventsPage() {
               Add to Google Calendar
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className="section">
+        <div className="container">
+          <Carousel slides={eventPhotos} />
         </div>
       </div>
     </>
