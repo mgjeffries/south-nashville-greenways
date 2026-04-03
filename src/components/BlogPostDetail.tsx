@@ -14,7 +14,7 @@ function renderContent(item: BlogPostContent, i: number, onHeadingClick: (id: st
     return <p key={i} className="post-body">{item}</p>
   }
   if (item.type === 'callout') {
-    return <blockquote key={i} className="post-callout">{item.text}</blockquote>
+    return <blockquote key={i} className="post-callout"><ReactMarkdown>{item.text}</ReactMarkdown></blockquote>
   }
   if (item.type === 'heading') {
     const Tag = `h${item.level}` as 'h2' | 'h3'

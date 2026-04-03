@@ -32,7 +32,7 @@ const post: BlogPost = {
     { type: "heading", level: 2, text: "Remaining issues" },
     "The painted median and crosswalks are still missing from the area that has been repaved, and the 5 delineators that were installed leave a car-sized gap in the the pedestrian refuge area.",
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/03-25-missing-crosswalks-and-median.JPG", alt: "Crosswalks and median are still missing after repaving", caption: "March 25th. The crosswalks and median are still missing after repaving" },
-    { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP. Submit a hub request to bring this to the city's attention" },
+    { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP. Submit a hub request to bring this to the city's attention. Also please consider [signing this letter of support](https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6) for a tactical urbanism install in this location." },
   ],
   links: [
     {
@@ -44,9 +44,17 @@ const post: BlogPost = {
       url: 'https://www.nashville.gov/departments/police/data-dashboard/vehicle-crashes-map',
     },
     {
-      label: 'Design Concept by Civic Design Center and NDOT for next phase of Antioch Pike',
+      label: 'Design Concept by Civic Design Center for long-term improvements',
       url: 'https://platform.remix.com/project/0988282d/scenario/4420e749-ca2c-4921-9ef7-e9365d43c5ea',
     },
+    {
+      label: 'Design Concept by Civic Design Center for short-term improvements',
+      url: 'https://platform.remix.com/project/e39ef4ee/scenario/711a6ab8-063f-420b-a872-be13ab7cc68e?latlng=36.10172,-86.7396,19.43',
+    },
+    {
+        label: 'Sign the open letter of support for a tactical urbanism install at this location',
+        url: 'https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6',
+    }
   ],
   pageUpdates: [
     {
@@ -60,6 +68,10 @@ const post: BlogPost = {
     {
       date: 'March 29',
       description: 'Added images of new delineators that were installed on March 25th.',
+    },
+    {
+      date: 'April 2nd',
+      description: 'Added new tactical urbanism design concept.',
     },
   ]
 };
