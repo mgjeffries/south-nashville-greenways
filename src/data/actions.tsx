@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { Mail } from 'lucide-react'
 import ShareButton from '../components/ShareButton.tsx'
 
@@ -14,7 +15,7 @@ export const actions: ActionData[] = [
     number: 1,
     title: 'Get Outside!',
     description: 'One of the best ways to advocate for walking and biking in Nashville is to do it!',
-    footer: <p>🚶🚴🏡</p>,
+    footer: <Link to="/events">🚴‍♂️🚴‍♀️ Events</Link>,
   },
   {
     number: 2,
