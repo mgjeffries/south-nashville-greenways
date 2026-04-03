@@ -7,6 +7,7 @@ interface ActionData {
   number: number
   title: string
   description?: string
+  icon?: ReactNode
   footer: ReactNode
 }
 
@@ -26,7 +27,8 @@ export const actions: ActionData[] = [
   {
     number: 3,
     title: 'Join our mailing list!',
-    footer: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeILnoDo_7AW2XO_1t3JkMONesT7Be_XMU5J4G_fwhrDWkJhg/viewform?usp=dialog"><Mail size={16} /> Join Mailing List</a>,
+    icon: <Mail size={48} />,
+    footer: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeILnoDo_7AW2XO_1t3JkMONesT7Be_XMU5J4G_fwhrDWkJhg/viewform?usp=dialog">Join Mailing List</a>,
   },
   {
     number: 4,

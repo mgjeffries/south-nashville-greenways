@@ -4,15 +4,17 @@ interface ActionCardProps {
   number: number
   title: string
   description?: string
+  icon?: ReactNode
   footer: ReactNode
 }
 
-export default function ActionCard({ number, title, description, footer }: ActionCardProps) {
+export default function ActionCard({ number, title, description, icon, footer }: ActionCardProps) {
   return (
     <div className="action-card">
       <div className="action-number">{number}</div>
       <h3>{title}</h3>
       {description && <p>{description}</p>}
+      {icon && <div className="card-icon">{icon}</div>}
       <div className="card-footer">
         {footer}
       </div>
