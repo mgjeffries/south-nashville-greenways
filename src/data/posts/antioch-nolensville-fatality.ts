@@ -20,7 +20,7 @@ const post: BlogPost = {
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/new-design-concept.png", alt: "New design concept by NDOT and Civic Design Center", caption: "New design concept by NDOT and Civic Design Center" },
     {
       type: "callout",
-      text: "I'm calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it visible. A pedestrian has already lost their life here. These are fast, high-impact fixes that can prevent the next tragedy.",
+      text: "I'm calling on NDOT and the Vision Zero Advisory Committee to act quickly: repaint the crosswalk markings at this intersection, restore the painted median, and install vertical delineators to make it visible. A pedestrian has already lost their life here. These are fast, high-impact fixes that can prevent the next tragedy.\n\n---\n\n✅ NDOT installed Delineators on March 14th, and restriped the road by April 9th.",
     },
     { type: "heading", level: 2, text: "March 14th: Repaving in Progress!" },
     "While walking by the area on Saturday March 14th I noticed construction vehicles getting ready for work. They are repaving the area that had been patched, and will have to re-paint the Antioch Pike portion of the intersection. I was told that the contractor doing the work doesn't get paid until work is complete, so I'm hopeful that the paint will be applied soon!",
