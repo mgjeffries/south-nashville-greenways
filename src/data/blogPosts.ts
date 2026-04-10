@@ -27,6 +27,7 @@ export interface BlogPost {
   content: BlogPostContent[]
   links?: BlogPostLink[]
   pageUpdates?: PageUpdate[]
+  showScrollButton?: boolean
 }
 
 import antiochNolensvilleFatality from './posts/antioch-nolensville-fatality.ts'

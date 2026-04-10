@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link, useSearchParams } from 'react-router-dom'
-import { ChevronRight, ExternalLink, Link2 } from 'lucide-react'
+import { ArrowDown, ArrowUp, ChevronRight, ExternalLink, Link2 } from 'lucide-react'
 import Lightbox from './Lightbox.tsx'
 import AuthorBio from './AuthorBio.tsx'
 import Carousel from './Carousel.tsx'
@@ -81,6 +81,34 @@ function renderContent(item: BlogPostContent, i: number, onHeadingClick: (id: st
   )
 }
 
+function ScrollButton() {
+  const [atBottom, setAtBottom] = useState(false)
+
+  useEffect(() => {
+    function onScroll() {
+      const scrolled = window.scrollY + window.innerHeight
+      const total = document.documentElement.scrollHeight
+      setAtBottom(scrolled > total * 0.6)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  function handleClick() {
+    if (atBottom) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    }
+  }
+
+  return (
+    <button className="scroll-nav-button" onClick={handleClick} aria-label={atBottom ? 'Scroll to top' : 'Scroll to bottom'}>
+      {atBottom ? <ArrowUp size={20} /> : <ArrowDown size={20} />}
+    </button>
+  )
+}
+
 export default function BlogPostDetail({ slug }: { slug: string }) {
   const post = blogPosts.find((p) => p.slug === slug)!
   const [searchParams, setSearchParams] = useSearchParams()
@@ -148,6 +176,7 @@ export default function BlogPostDetail({ slug }: { slug: string }) {
           {post.pageUpdates && <PageUpdateBanner updates={post.pageUpdates} />}
         </div>
       </div>
+      {post.showScrollButton && <ScrollButton />}
     </>
   )
 }

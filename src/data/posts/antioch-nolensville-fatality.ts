@@ -66,6 +66,7 @@ const post: BlogPost = {
         url: 'https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6',
     }
   ],
+  showScrollButton: true,
   pageUpdates: [
     {
       date: 'March 10, 9:38 am',
