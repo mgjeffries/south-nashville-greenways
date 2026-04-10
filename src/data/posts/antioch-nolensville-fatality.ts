@@ -43,6 +43,13 @@ const post: BlogPost = {
         { src: "/images/blog/antioch-nolensville-fatality/restriped-still.JPG", alt: "Still view of the re-striped median and crosswalk on Antioch Pike" },
       ],
     },
+    { type: "heading", level: 2, text: "What's Next for This Crosswalk?" },
+    "I don't feel like it's enough to repaint and install just a few delineators at this intersection. I want to continue making this crosswalk safer. In the long run, I love the design that the Civic Design Center has created with a permanent pedestrian refuge at this intersection, but that could take a year to get approved and installed, and I want to make improvements more quickly. With that in mind I've been working with a lot of great neighbors and organizations on an application for a Tactical Urbanism permit from NDOT to install more safety measures at this intersection. We've had input from Alexa with the Woodbine Neighborhood group, Izi from Walk Bike Nashville, residents at Radnor Towers, and many more! A big thank you to Joe and Eric at the Civic Design Center for putting together this design:",
+    { type: "image", src: "/images/blog/antioch-nolensville-fatality/tactical-urbanism-design.png", alt: "Tactical urbanism design concept for the Antioch Pike and Nolensville Pike intersection", caption: "Tactical urbanism design by the Civic Design Center" },
+    {
+      type: "callout",
+      text: "Like this design? Please [sign this open letter](https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6) in support!\n\nHave a question or a comment? Please [leave a message on the live document](https://platform.remix.com/project/e39ef4ee/scenario/711a6ab8-063f-420b-a872-be13ab7cc68e?latlng=36.10169,-86.73991,19.241) here — this will go directly to the Civic Design Center.",
+    },
   ],
   links: [
     {
@@ -87,6 +94,10 @@ const post: BlogPost = {
     {
       date: 'April 9th',
       description: 'Added re-striping update with new photos.',
+    },
+    {
+      date: 'April 9th',
+      description: 'Added tactical urbanism design concept and next steps for the crosswalk.',
     },
   ]
 };
