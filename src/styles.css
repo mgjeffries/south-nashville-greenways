@@ -818,6 +818,24 @@ footer {
     margin-bottom: 5px;
 }
 
+.post-wide-image {
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    border-radius: 12px;
+}
+
+.post-carousel {
+    margin-bottom: 24px;
+}
+
+.post-image-caption {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
 .post-body {
     font-size: 1.15rem;
     line-height: 1.8;

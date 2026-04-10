@@ -6,7 +6,8 @@ export interface BlogPostLink {
 export type BlogPostContent =
   | string
   | { type: 'callout'; text: string }
-  | { type: 'image'; src: string; alt: string; caption?: string; sourceUrl?: string; isHeroImage?: boolean; includeOnCoverCard?: boolean }
+  | { type: 'image'; src: string; alt: string; caption?: string; sourceUrl?: string; isHeroImage?: boolean; includeOnCoverCard?: boolean; wide?: boolean }
+  | { type: 'carousel'; images: Array<{ src: string; alt: string; caption?: string }>; caption?: string }
   | { type: 'heading'; level: 2 | 3; text: string }
   | { type: 'image-comparison'; left: { src: string; alt: string }; right: { src: string; alt: string }; caption?: string }
   | { type: 'paragraph-with-link'; text: string; linkText: string; url: string }

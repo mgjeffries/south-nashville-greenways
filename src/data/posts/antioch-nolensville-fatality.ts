@@ -33,6 +33,16 @@ const post: BlogPost = {
     "The painted median and crosswalks are still missing from the area that has been repaved, and the 5 delineators that were installed leave a car-sized gap in the the pedestrian refuge area.",
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/03-25-missing-crosswalks-and-median.JPG", alt: "Crosswalks and median are still missing after repaving", caption: "March 25th. The crosswalks and median are still missing after repaving" },
     { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP. Submit a hub request to bring this to the city's attention. Also please consider [signing this letter of support](https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6) for a tactical urbanism install in this location." },
+    { type: "heading", level: 2, text: "April 9th: Re-Striping Complete!" },
+    "I was out checking on the crosswalk today, and noticed a beautiful sight: Fresh paint! Although I strongly believe that we need more than just paint to protect us from vehicles, I admit that paint can help. It clarifies where the cars should be, and visually narrows the road. In this case, it's also critical to have it installed before we begin our next phase of the project: installing more delineators and planters to create a pedestrian refuge.",
+    { type: "image", src: "/images/blog/antioch-nolensville-fatality/restriped-panorama.JPG", alt: "Panoramic view of the re-striped crosswalk and median on Antioch Pike", caption: "The freshly re-striped intersection", wide: true },
+    {
+      type: "carousel",
+      images: [
+        { src: "/images/blog/antioch-nolensville-fatality/restriped-crosswalk.JPG", alt: "Fresh crosswalk paint at the Antioch Pike and Nolensville Pike intersection" },
+        { src: "/images/blog/antioch-nolensville-fatality/restriped-still.JPG", alt: "Still view of the re-striped median and crosswalk on Antioch Pike" },
+      ],
+    },
   ],
   links: [
     {
@@ -72,6 +82,10 @@ const post: BlogPost = {
     {
       date: 'April 2nd',
       description: 'Added new tactical urbanism design concept.',
+    },
+    {
+      date: 'April 9th',
+      description: 'Added re-striping update with new photos.',
     },
   ]
 };

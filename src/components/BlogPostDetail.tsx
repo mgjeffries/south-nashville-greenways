@@ -4,6 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { ChevronRight, ExternalLink, Link2 } from 'lucide-react'
 import Lightbox from './Lightbox.tsx'
 import AuthorBio from './AuthorBio.tsx'
+import Carousel from './Carousel.tsx'
 import ImageComparison from './ImageComparison.tsx'
 import PageUpdateBanner from './PageUpdateBanner.tsx'
 import { blogPosts, type BlogPostContent } from '../data/blogPosts.ts'
@@ -55,8 +56,23 @@ function renderContent(item: BlogPostContent, i: number, onHeadingClick: (id: st
   if (item.type === 'markdown') {
     return <div key={i} className="post-body"><ReactMarkdown>{item.text}</ReactMarkdown></div>
   }
+  if (item.type === 'carousel') {
+    return (
+      <div key={i} className="post-carousel">
+        <Carousel slides={item.images} />
+        {item.caption && <p className="post-image-caption">{item.caption}</p>}
+      </div>
+    )
+  }
   if (item.type === 'image' && item.isHeroImage) {
     return null
+  }
+  if (item.type === 'image' && item.wide) {
+    return (
+      <Lightbox key={i} src={item.src} alt={item.alt} caption={item.caption} sourceUrl={item.sourceUrl}>
+        <img className="post-hero-image post-wide-image" src={item.src} alt={item.alt} />
+      </Lightbox>
+    )
   }
   return (
     <Lightbox key={i} src={item.src} alt={item.alt} caption={item.caption} sourceUrl={item.sourceUrl}>
