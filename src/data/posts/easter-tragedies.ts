@@ -27,7 +27,7 @@ const post: BlogPost = {
     { type: "heading", level: 3, text: "Confusing Speed Signage" },
     "On a large road connecting between a major city and suburbs I expect there to be a lot of speed limit signage. I expect the speed limit to be low in the city, and gradually rise as it exits into the country. I took a drive on this road looking for speed limit signage, and I found it to be very confusing. I saw a lot of signage about school zones, some with different speeds with a flashing indicator, some with a different speed \"when children present\", but I didn't see a single speed limit sign within 2000 feet of the intersection in either direction.",
     "I don't know what the intended speed limit is here, but I would recommend setting it to a consistent low number, such as 30 MPH, rather than having it at a high number like 40 MPH, and then expecting drivers to drop to 15 MPH if they see children present.",
-    { type: "heading", level: 2, text: "More Improvements Needed" },
+    { type: "heading", level: 2, text: "Improvements Needed" },
     "There are lots of ways to slow down cars: speed bumps, lane reductions, lane shifts, radar speed signs and speed cameras, traffic signals that automatically give pedestrians more time to walk. Each option has pros and cons. I'm not sure what option is the best fit here, but I know that something needs to be done to end the pattern of pedestrian deaths on this road.",
     {
       type: "callout",
