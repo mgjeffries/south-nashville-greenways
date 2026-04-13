@@ -34,8 +34,10 @@ import antiochNolensvilleFatality from './posts/antioch-nolensville-fatality.ts'
 import eastThompson from './posts/east-thompson.ts'
 import antiochPike from './posts/antioch-pike.ts'
 import thompson2026 from './posts/thompson-2026.ts'
+import easterTragedies from './posts/easter-tragedies.ts'
 
 export const blogPosts: BlogPost[] = [
+  easterTragedies,
   antiochNolensvilleFatality,
   eastThompson,
   antiochPike,
