@@ -1110,6 +1110,23 @@ footer {
     color: #4a5568;
 }
 
+@media (max-width: 768px) {
+    .page-update-item {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .page-update-date {
+        order: 2;
+        align-self: flex-end;
+        min-width: unset;
+    }
+
+    .page-update-description {
+        order: 1;
+    }
+}
+
 /* Map Overlay */
 .map-overlay {
     position: relative;
