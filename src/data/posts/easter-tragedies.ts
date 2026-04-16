@@ -35,7 +35,7 @@ const post: BlogPost = {
     { type: "markdown", text: "1. The data from the last 6 months indicates that there is a need for safety improvements at the intersection of Lafayette and Fairfield, as well as Murfreesboro Pike. Are NDOT and TDOT committed to working together to reduce fatal accidents on this road?\n2. What types of safety measures will NDOT and TDOT be investigating to reduce vehicle speed at this intersection? Options could include speed limit reductions, speed bumps, lane reductions, lane shifts, radar speed signs, speed cameras, and traffic signals that automatically give pedestrians more time to walk.\n3. When can the public expect to engage with NDOT and TDOT about these improvements?" },
     {
       type: "callout",
-      text: "What are your thoughts on this intersection? Do you want to see improvements on this road? Send me an email, or attend the Vision Zero Advisory Committee to speak about this.",
+      text: "What are your thoughts on this intersection? Do you want to see improvements on this road? Send me an email, or leave a comment on the design concept.",
     },
   ],
   links: [
@@ -54,6 +54,10 @@ const post: BlogPost = {
     {
       label: "MNPD Vehicle Crashes Map",
       url: "https://www.nashville.gov/departments/police/data-dashboard/vehicle-crashes-map",
+    },
+    {
+      label: "Design Concept by the Civic Design Center",
+      url: "https://platform.remix.com/project/b69da617/scenario/e0cf37a9-66a2-4fe0-a686-ed0974aa655e?latlng=36.14734,-86.75808,18.817,p0,b22.4",
     },
   ],
   showScrollButton: true,
