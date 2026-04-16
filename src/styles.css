@@ -859,8 +859,8 @@ footer {
     font-style: italic;
 }
 
-.post-body blockquote ul,
-.post-body blockquote ol {
+.post-body ul,
+.post-body ol {
     padding-left: 2rem;
 }
 
