@@ -29,7 +29,7 @@ const post: BlogPost = {
     "A crew installed 5 delineators at the intersection in under 30 minutes. It's great to see progress being made here.",
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/delineator-installation.JPG", alt: "Crew installing delineators", caption: "Delineators installed at the intersection on March 25th" },
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/delieneators-installed.JPG", alt: "5 delineators installed", caption: "The 5 delineators installed" },
-    { type: "heading", level: 2, text: "Remaining issues" },
+    { type: "heading", level: 2, text: "Remaining issues [as of March 25th]" },
     "The painted median and crosswalks are still missing from the area that has been repaved, and the 5 delineators that were installed leave a car-sized gap in the the pedestrian refuge area.",
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/03-25-missing-crosswalks-and-median.JPG", alt: "Crosswalks and median are still missing after repaving", caption: "March 25th. The crosswalks and median are still missing after repaving" },
     { type: "callout", text: "We need NDOT to repaint the missing median and crosswalks ASAP. Submit a hub request to bring this to the city's attention.\n\n---\n\n✅ Your requests were answered! NDOT re-striped the road on April 9th." },
@@ -43,7 +43,7 @@ const post: BlogPost = {
         { src: "/images/blog/antioch-nolensville-fatality/restriped-still.JPG", alt: "Still view of the re-striped median and crosswalk on Antioch Pike" },
       ],
     },
-    { type: "heading", level: 2, text: "What's Next for This Crosswalk?" },
+    { type: "heading", level: 2, text: "What's Next for This Crosswalk? [as of April 2nd]" },
     "I don't feel like it's enough to repaint and install just a few delineators at this intersection. I want to continue making this crosswalk safer. In the long run, I love the design that the Civic Design Center has created with a permanent pedestrian refuge at this intersection, but that could take a year to get approved and installed, and I want to make improvements more quickly. With that in mind I've been working with a lot of great neighbors and organizations on an application for a Tactical Urbanism permit from NDOT to install more safety measures at this intersection. We've had input from Alexa with the Woodbine Neighborhood Group, Izi from Walk Bike Nashville, residents at Radnor Towers, and many more! A big thank-you to Joe and Eric at the Civic Design Center for putting together this design!",
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/tactical-urbanism-design.png", alt: "Tactical urbanism design concept for the Antioch Pike and Nolensville Pike intersection", caption: "Tactical urbanism design by the Civic Design Center" },
     {
