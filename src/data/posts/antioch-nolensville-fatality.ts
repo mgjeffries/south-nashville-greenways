@@ -48,8 +48,20 @@ const post: BlogPost = {
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/tactical-urbanism-design.png", alt: "Tactical urbanism design concept for the Antioch Pike and Nolensville Pike intersection", caption: "Tactical urbanism design by the Civic Design Center" },
     {
       type: "callout",
-      text: "Like this design? Please [sign this open letter](https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6) in support!\n\nHave a question or a comment? Please [leave a message on the live document](https://platform.remix.com/project/e39ef4ee/scenario/711a6ab8-063f-420b-a872-be13ab7cc68e?latlng=36.10169,-86.73991,19.241) here — this will go directly to the Civic Design Center.",
+      text: "Like this design? Please [sign this open letter](https://openletter.earth/safer-crosswalk-on-antioch-pike-b9a656c6) in support!\n\nHave a question or a comment? Please [leave a message on the live document](https://platform.remix.com/project/e39ef4ee/scenario/711a6ab8-063f-420b-a872-be13ab7cc68e?latlng=36.10169,-86.73991,19.241) here — this will go directly to the Civic Design Center. \n\n---\n\n✅ 48 people signed the open letter, and the improvements were installed on April 24th!",
     },
+    {type: "heading", level: 2, text: "April 24th: Tactical Urbanism Improvements Installed!" },
+    {type: "carousel", images: [
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0252.JPG", alt:"new delineators installed at the intersection of Antioch Pike and Nolensville Pike"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0253.JPG", alt:"new delineators installed at the intersection of Antioch Pike and Nolensville Pike"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0254.JPG", alt:"new delineators installed at the intersection of Antioch Pike and Nolensville Pike"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0255.JPG", alt:"new delineators installed at the intersection of Antioch Pike and Nolensville Pike"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0256.JPG", alt:"approaching the newly improved crosswalk"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0257.JPG", alt:"crosswalk"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0260.JPG", alt:"closup of the crosswalk"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0261.JPG", alt:"view from crosswalk looking east"},
+        {src: "/images/blog/antioch-nolensville-fatality/tu-install/IMG_0262.JPG", alt:"view from crosswalk looking west"},
+    ]}
   ],
   links: [
     {
@@ -94,6 +106,10 @@ const post: BlogPost = {
     {
       date: 'April 9th',
       description: 'Added re-striping update with new photos.',
+    },
+    {
+      date: 'April 24th',
+      description: 'Added images of the newly installed tactical urbanism improvements.',
     }
   ]
 };
