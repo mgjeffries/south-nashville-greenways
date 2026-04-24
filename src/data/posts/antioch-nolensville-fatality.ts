@@ -2,7 +2,7 @@ import type { BlogPost } from "../blogPosts.ts";
 
 const post: BlogPost = {
   slug: "antioch-nolensville-fatality",
-  title: "Pedestrian Killed in South Nashville",
+  title: "Pedestrian Killed in Antioch Pike Crosswalk",
   author: "gib-jeffries",
   date: "March 9, 2026",
   summary:
