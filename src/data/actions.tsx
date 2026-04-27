@@ -21,7 +21,7 @@ export const actions: ActionData[] = [
   {
     number: 2,
     title: 'Get involved with Bike Fun!',
-    description: 'Bike fun is a great organization that teaches bike skills. They have an office on Nolensiville road!',
+    description: 'Bike fun is a great organization that teaches bike skills. They have an office on Nolensville road!',
     footer: <a href="https://nashvillebikefun.org/">Visit Bike Fun</a>,
   },
   {
