@@ -13,6 +13,7 @@ export type BlogPostContent =
   | { type: 'paragraph-with-link'; text: string; linkText: string; url: string }
   | { type: 'markdown'; text: string }
   | { type: 'tableOfContents' }
+  | { type: 'iframe'; src: string; width?: number; height?: number; title?: string }
 
 export interface PageUpdate {
   date: string
@@ -36,8 +37,10 @@ import eastThompson from './posts/east-thompson.ts'
 import antiochPike from './posts/antioch-pike.ts'
 import thompson2026 from './posts/thompson-2026.ts'
 import easterTragedies from './posts/easter-tragedies.ts'
+import nolensvilleRoadGreenways from './posts/nolensville-road-greenways.ts'
 
 export const blogPosts: BlogPost[] = [
+  nolensvilleRoadGreenways,
   easterTragedies,
   antiochNolensvilleFatality,
   eastThompson,
