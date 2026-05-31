@@ -10,7 +10,7 @@ const post: BlogPost = {
   content: [
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/scene.png", alt: "View of the Antioch Pike and Nolensville Pike intersection where a pedestrian was killed", isHeroImage: true, includeOnCoverCard: true },
     "A pedestrian was struck and killed by a vehicle on Antioch Pike on February 20th.  This location is tragically just past where the current tactical urbanism installation ends. Not knowing this had occurred, I biked through the intersection two days later while recording my ride.",
-    { type: "tableOfContents" },``
+    { type: "tableOfContents" },
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/crosswalk.png", alt: "The crosswalk markings at the intersection of Antioch Pike and Nolensville Pike are mostly missing" },
     "As I approached the intersection from Nolensville Pike turing East, I noticed that the painted crosswalks are mostly missing. I would like to see it re-painted to increase awareness of pedestrians.",
     { type: "image", src: "/images/blog/antioch-nolensville-fatality/overhead.png", alt: "Overhead view from Google Maps showing a painted median", caption: "Older image from google maps" },
