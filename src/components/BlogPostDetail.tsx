@@ -106,6 +106,20 @@ function renderContent(item: BlogPostContent, i: number, onHeadingClick: (id: st
   if (item.type === 'markdown') {
     return <div key={i} className="post-body"><ReactMarkdown>{item.text}</ReactMarkdown></div>
   }
+  if (item.type === 'iframe') {
+    return (
+      <div key={i} className="post-iframe-wrapper">
+        <iframe
+          src={item.src}
+          width={item.width ?? 640}
+          height={item.height ?? 480}
+          title={item.title ?? 'Embedded map'}
+          style={{ border: 0, maxWidth: '100%' }}
+          allowFullScreen
+        />
+      </div>
+    )
+  }
   if (item.type === 'carousel') {
     return (
       <div key={i} className="post-carousel">
