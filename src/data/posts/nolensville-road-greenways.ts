@@ -22,7 +22,7 @@ const post: BlogPost = {
     "Check out the interactive map and see what you think! If you click on the 📷 icons you can see a conecptual rendering at that location, as well as current image for comparison. Would you use a path like this if it existed? Do you like it? Do you hate it? Do you own property or a business that would be affected by this for better or worse?",
     { type: 'heading', level: 3, text: 'Interactive Map' },
     { type: 'iframe', src: 'https://www.google.com/maps/d/u/0/embed?mid=1_3ZQLIKoZxqcnogii7rtehGfVXHL0ww&ehbc=2E312F&noprof=1', width: 640, height: 480, title: 'Nolensville Road Greenways Map' },
-    { type: 'callout', text: "I'd love to hear your thoughts about this pitch! Please send me an email with your feedback, or even just a note saying that you'd like to hear more updates!" },
+    { type: 'callout', text: "I'd love to hear your thoughts about this pitch! Please send me an email with your feedback, or just a note saying that you'd like to hear more updates!" },
   ],
 }
 
