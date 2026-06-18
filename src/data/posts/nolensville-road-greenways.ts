@@ -8,6 +8,8 @@ const post: BlogPost = {
   summary:
     "We've got traffic jams! We've got crackle and pop exhausts! We've got drag racing! But even with all that we have an opportunity to add safe, protected paths for walking and biking on Nolensville road. The type of path you can walk on with your family as you head from your favorite local shop to Coleman Park!",
   content: [
+    { type: "image", src: "/images/blog/nolensville-road-greenways/greenway-render-elevation.png", alt: "Lafayette Street near Fairfield Ave where two hit-and-run crashes occurred", isHeroImage: true, includeOnCoverCard: true },
+
     { type: "tableOfContents" },
     { type: 'heading', level: 2, text: 'Oh, Really?' },
     "The stretch of Nolensville pike has some challenges for walking and biking. There are sidewalks, which is great, but they are close to the highway. They are great for getting from one business to the next, but not very pleasant for an extended walk. Also, there are no bike lanes on this section of the road, and although a tiny sign declares \"NOTICE BIKE MAY USE FULL LANE\" it doesn't feel safe to bike here.",
