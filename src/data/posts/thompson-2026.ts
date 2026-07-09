@@ -20,11 +20,20 @@ const post: BlogPost = {
     "I find this project especially exciting because this route is on my way to a lot of local businesses: grocery store, home goods, rock climbing gym, and my wife's workplace. It also currently features some of the most impassable terrain, such as this stretch with cars driving at lethal speeds, no shoulder, and a rocky ditch.",
     { type: 'image', src: '/images/blog/thompson-2026/ditch.png', alt: 'Ditch along Thompson Lane', caption: 'Current state of Thompson Lane' },
     { type: 'callout', text: "What are your thoughts on this project? If you'd like to be involved in providing community support and feedback for this, please reach out using my email below!" },
+    "I reached out to TDOT in June and confirmed that the project is on schedule, and obtained a copy of the designs. I've linked them here with their permission.",
+    {type: 'image', src: '/images/blog/thompson-2026/2026-07-08-tdot-plans.png', alt: 'New plans for Thompson Lane', caption: 'New plans for Thompson Lane', sourceUrl: "https://drive.google.com/file/d/1J8O2oxOMmZ1EHkocLHBu5c-szvLcSscp/view?usp=sharing" },
   ],
   links: [
+    { label: "TDOT's designs for the upgraded road", url: "https://drive.google.com/file/d/1J8O2oxOMmZ1EHkocLHBu5c-szvLcSscp/view?usp=sharing"},
     { label: 'Neighborhood Improvement Tracker', url: 'https://experience.arcgis.com/experience/d7026b3c1ab1465396bc58531d668f8a/page/Page?views=Filter#data_s=id%3AdataSource_1-192d5ca6b51-layer-10%3A1146' },
     { label: 'Choose How You Move Live Map', url: 'https://experience.arcgis.com/experience/758b1d6becb44127a9d4edec0f722b76/page/Choose-Your-Council-District' },
   ],
+  pageUpdates: [
+    {
+        date: '2026-07-08',
+        description: "TDOT has shared the designs for the project, and I've linked them above. The project is still on schedule for this year."
+    }
+  ]
 }
 
 export default post
