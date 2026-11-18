@@ -7,10 +7,21 @@ export default function BlogCard({ slug, title, date, content, summary }: BlogPo
   )
   const cardImages = allImages.filter((img) => img.includeOnCoverCard)
   if (cardImages.length === 0 && allImages.length > 0) cardImages.push(allImages[0])
+
+  const cardComparisons = content.filter((item): item is {
+    type: 'image-comparison'
+    left: { src: string; alt: string }
+    right: { src: string; alt: string }
+    includeOnCoverCard?: boolean
+  } => typeof item === 'object' && item.type === 'image-comparison' && item.includeOnCoverCard === true)
   return (
     <Link to={`/blog/${slug}`} className="blog-card-link">
       <article className="blog-card">
         <div className="blog-card-image">
+          {cardComparisons.flatMap((comparison) => [
+            <img className="blog-card-comparison-left" key={comparison.left.src} src={comparison.left.src} alt={comparison.left.alt}  />,
+            <img className="blog-card-comparison-right" key={comparison.right.src} src={comparison.right.src} alt={comparison.right.alt}  />,
+          ])}
           {cardImages.map((image) => (
             <img key={image.src} src={image.src} alt={image.alt} />
           ))}

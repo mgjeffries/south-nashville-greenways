@@ -9,7 +9,7 @@ export type BlogPostContent =
   | { type: 'image'; src: string; alt: string; caption?: string; sourceUrl?: string; isHeroImage?: boolean; includeOnCoverCard?: boolean; wide?: boolean }
   | { type: 'carousel'; images: Array<{ src: string; alt: string; caption?: string }>; caption?: string }
   | { type: 'heading'; level: 2 | 3; text: string }
-  | { type: 'image-comparison'; left: { src: string; alt: string }; right: { src: string; alt: string }; caption?: string }
+  | { type: 'image-comparison'; left: { src: string; alt: string }; right: { src: string; alt: string }; caption?: string; includeOnCoverCard?: boolean }
   | { type: 'paragraph-with-link'; text: string; linkText: string; url: string }
   | { type: 'markdown'; text: string }
   | { type: 'tableOfContents' }
@@ -38,8 +38,10 @@ import antiochPike from './posts/antioch-pike.ts'
 import thompson2026 from './posts/thompson-2026.ts'
 import easterTragedies from './posts/easter-tragedies.ts'
 import nolensvilleRoadGreenways from './posts/nolensville-road-greenways.ts'
+import aBetterBridge from './posts/a-better-bridge.ts'
 
 export const blogPosts: BlogPost[] = [
+  aBetterBridge,
   nolensvilleRoadGreenways,
   easterTragedies,
   antiochNolensvilleFatality,

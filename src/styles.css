@@ -485,12 +485,27 @@ footer {
     display: flex;
 }
 
-.blog-card-image img {
+.blog-card-image img,
+.blog-card-comparison {
     flex: 1;
     min-width: 0;
+}
+
+.blog-card-image img {
     height: 220px;
     object-fit: cover;
     display: block;
+}
+
+.blog-card-comparison {
+    display: flex;
+    height: 220px;
+}
+
+.blog-card-comparison img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .blog-card-content {
